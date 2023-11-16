@@ -16,6 +16,7 @@
 
 ## Bug反馈
     QQ: 474278375
+    github: https://github.com/AzagThoth24/MemoryHack
 
 ## Credits
     Author: Asphodelus
