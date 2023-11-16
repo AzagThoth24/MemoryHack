@@ -21,4 +21,9 @@
 ## Credits
     Author: Asphodelus
     Contributor: vcccv
-    Thanks: 太一无炁、胡桃、Call Disaster、哗啦、可乐
+    Thanks: 太一无炁, 胡桃, Call Disaster, 哗啦, 可乐
+    Special Thanks: UnryzeC, DracoL1ch 
+
+    WorldEditor: 
+            YDWE - 1.31.8
+            YDWE - 1.31.13
