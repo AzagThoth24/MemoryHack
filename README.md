@@ -12,16 +12,17 @@
 
 ## 如何导入MemoryHack库
     - 选择给定的编辑器版本(1.31.8或者1.32.13)，打开MemoryHack库.w3x，将其中的代码复制进你的地图
-    - 将MemHack.dll导入你的地图，并修改路径为MemHack.dll，即删除前面的war3mapImported\
+    - 将MemHack.dll和MemHackLoad导入你的地图，并修改路径为MemHack.dll和MemHackLoad，即删除前面的war3mapImported\
 
 ## Bug反馈
     QQ: 474278375
     github: https://github.com/AzagThoth24/MemoryHack
+    gitee: https://gitee.com/azagthoth24/memory-hack
 
 ## Credits
     Author: Asphodelus
     Contributor: vcccv
-    Thanks: 太一无炁, 胡桃, Call Disaster, 哗啦, 可乐, MotherLand
+    Thanks: 太一无炁, 胡桃, Call Disaster, 哗啦, 可乐, MotherLand, Destiny丶HERO
     Special Thanks: UnryzeC, DracoL1ch, YDWE Team
 
     WorldEditor: 
