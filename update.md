@@ -33,14 +33,17 @@
     9.修复MHFrame_SetText对TextButton等使用导致崩溃的bug
     10.修复判定frame隐藏t封装不正确的bug
     11.修复设置进度计时器进度1无效的bug
+    12.修复设置技能自定义数据回收不正常的bug
 
 ## [Chg]
-    1.修改dll的解压路径，请务必更新MemHackLoader文件
+    1.修改dll的解压路径
     2.更改jass接口的内容，避免w2l优化脚本警告
     3.jass追踪去掉函数耗时统计
     4.修改MH的伤害事件的名称: 任意单位接受伤害->任意单位即将受伤
     5.修改判定普攻伤害的函数名称：是攻击伤害->是物理伤害
     6.对部分其他api的hook做了兼容
+    7.修改MemHackLoader文件，请务必更新该文件
+    8.设置单位技能自定义数据后自动更新信息栏
 
 ## [Old]
     1.更改设置文本限制的函数名: MHFrame_SetTextLength->MHFrame_SetTextLimit
