@@ -474,7 +474,7 @@ body {
 <nav class="sidebar">
   <div class="sidebar-header">
     <h1>&#128268; MemHack API</h1>
-    <div class="subtitle">JASS 接口文档 &middot; 2026-03-14</div>
+    <div class="subtitle">JASS 接口文档 &middot; 2026-03-21</div>
   </div>
   <div class="sidebar-search">
     <input type="text" id="searchInput" placeholder="&#128269; 搜索函数或常量..." oninput="filterItems(this.value)">
@@ -485,7 +485,7 @@ body {
       <div class="nav-section-title collapsed" onclick="toggleSection(this)"><span class="arrow">&#9660;</span>普通版接口</div>
       <div class="nav-items collapsed">
         <div class="nav-group">
-          <div class="nav-group-title collapsed" onclick="toggleGroup(this)" data-search="unit 单位"><span class="arrow">&#9660;</span>单位 (196)</div>
+          <div class="nav-group-title collapsed" onclick="toggleGroup(this)" data-search="unit 单位"><span class="arrow">&#9660;</span>单位 (197)</div>
           <div class="nav-items collapsed">
             <a class="nav-item" href="#func-MHUnit_EnumInRange" data-search="MHUnit_EnumInRange 选取范围内的单位做动作">选取范围内的单位做动作</a>
             <a class="nav-item" href="#func-MHUnit_EnumInRangeEx" data-search="MHUnit_EnumInRangeEx 选取圆形范围内的单位做动作">选取圆形范围内的单位做动作</a>
@@ -495,6 +495,7 @@ body {
             <a class="nav-item" href="#func-MHUnit_EnumInScreenEx" data-search="MHUnit_EnumInScreenEx 选取屏幕内的单位做动作">选取屏幕内的单位做动作</a>
             <a class="nav-item" href="#func-MHUnit_EnumSelections" data-search="MHUnit_EnumSelections 选取当前选择的所有单位做动作">选取当前选择的所有单位做动作</a>
             <a class="nav-item" href="#func-MHUnit_GetEnumUnit" data-search="MHUnit_GetEnumUnit 获取选取的单位">获取选取的单位</a>
+            <a class="nav-item" href="#func-MHUnit_GetSelectionsSize" data-search="MHUnit_GetSelectionsSize 获取当前选择的单位数量">获取当前选择的单位数量</a>
             <a class="nav-item" href="#func-MHUnit_CreateBuilding" data-search="MHUnit_CreateBuilding 创建建筑">创建建筑</a>
             <a class="nav-item" href="#func-MHUnit_AddAbility" data-search="MHUnit_AddAbility 添加技能">添加技能</a>
             <a class="nav-item" href="#func-MHUnit_RemoveAbility" data-search="MHUnit_RemoveAbility 删除技能">删除技能</a>
@@ -1718,11 +1719,12 @@ body {
           </div>
         </div>
         <div class="nav-group">
-          <div class="nav-group-title collapsed" onclick="toggleGroup(this)" data-search="constant 游戏常数"><span class="arrow">&#9660;</span>游戏常数 (10)</div>
+          <div class="nav-group-title collapsed" onclick="toggleGroup(this)" data-search="constant 游戏常数"><span class="arrow">&#9660;</span>游戏常数 (11)</div>
           <div class="nav-items collapsed">
             <a class="nav-item" href="#func-MHConst_SetOPLimit" data-search="MHConst_SetOPLimit 设置字节码限制">设置字节码限制</a>
             <a class="nav-item" href="#func-MHConst_GetOPLimit" data-search="MHConst_GetOPLimit 获取字节码限制">获取字节码限制</a>
             <a class="nav-item" href="#func-MHConst_SetMaxArraySize" data-search="MHConst_SetMaxArraySize 设置最大数组长度">设置最大数组长度</a>
+            <a class="nav-item" href="#func-MHConst_GetMaxArraySize" data-search="MHConst_GetMaxArraySize 获取最大数组长度">获取最大数组长度</a>
             <a class="nav-item" href="#func-MHConst_UnlockBlpSizeLimit" data-search="MHConst_UnlockBlpSizeLimit 解除Blp大小限制">解除Blp大小限制</a>
             <a class="nav-item" href="#func-MHConst_SetMaxMoveSpeed" data-search="MHConst_SetMaxMoveSpeed 设置最大移动速度">设置最大移动速度</a>
             <a class="nav-item" href="#func-MHConst_SetMaxAttackSpeed" data-search="MHConst_SetMaxAttackSpeed 设置最大攻击速度">设置最大攻击速度</a>
@@ -1996,7 +1998,7 @@ body {
 <div class="section" id="section-funcs">
 <h2 class="section-title"><span class="icon">&#9889;</span> 函数接口</h2>
 
-<h3 id="cat-unit" style="color:var(--accent-cyan);margin:24px 0 12px 0;font-size:1.1em;">&#128194; 单位 (unit) - 196 个接口</h3>
+<h3 id="cat-unit" style="color:var(--accent-cyan);margin:24px 0 12px 0;font-size:1.1em;">&#128194; 单位 (unit) - 197 个接口</h3>
 
 <div class="func-card" id="func-MHUnit_EnumInRange" data-search="MHUnit_EnumInRange 选取范围内的单位做动作">
   <div class="func-card-header">
@@ -2158,6 +2160,22 @@ body {
     <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
     <div class="func-params-title">JASS函数定义</div>
     <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHUnit_GetEnumUnit</span> <span class="kw">takes</span> <span class="type">nothing</span> <span class="kw">returns</span> <span class="type">unit</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+  </div>
+</div>
+
+<div class="func-card" id="func-MHUnit_GetSelectionsSize" data-search="MHUnit_GetSelectionsSize 获取当前选择的单位数量">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">获取当前选择的单位数量</div>
+    <div class="func-badges">
+      <span class="badge-lib">单位</span>
+    </div>
+    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">每个人选择的单位数量可能不同, 注意不要拿去做同步逻辑<br></div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHUnit_GetSelectionsSize</span> <span class="kw">takes</span> <span class="type">nothing</span> <span class="kw">returns</span> <span class="type">integer</span></div>
   </div>
   <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
   <div class="func-card-body">
@@ -6301,7 +6319,7 @@ body {
     <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">返回值为技能数量<br></div>
     <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
     <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHAbility_GetHeroAll</span> <span class="kw">takes</span> <span class="type">unit</span> <span class="param-name">u</span>, <span class="type">hashtable</span> <span class="param-name">ht</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHAbility_GetHeroAll</span> <span class="kw">takes</span> <span class="type">unit</span> <span class="param-name">u</span>, <span class="type">hashtable</span> <span class="param-name">ht</span> <span class="kw">returns</span> <span class="type">integer</span></div>
   </div>
   <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
   <div class="func-card-body">
@@ -25468,7 +25486,7 @@ body {
   </div>
 </div>
 
-<h3 id="cat-constant" style="color:var(--accent-cyan);margin:24px 0 12px 0;font-size:1.1em;">&#128194; 游戏常数 (constant) - 10 个接口</h3>
+<h3 id="cat-constant" style="color:var(--accent-cyan);margin:24px 0 12px 0;font-size:1.1em;">&#128194; 游戏常数 (constant) - 11 个接口</h3>
 
 <div class="func-card" id="func-MHConst_SetOPLimit" data-search="MHConst_SetOPLimit 设置字节码限制">
   <div class="func-card-header">
@@ -25530,11 +25548,27 @@ body {
   </div>
 </div>
 
+<div class="func-card" id="func-MHConst_GetMaxArraySize" data-search="MHConst_GetMaxArraySize 获取最大数组长度">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">获取最大数组长度</div>
+    <div class="func-badges">
+      <span class="badge-lib">游戏常数</span>
+    </div>
+    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">无符号整数. 默认限制为8192<br></div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHConst_GetMaxArraySize</span> <span class="kw">takes</span> <span class="type">nothing</span> <span class="kw">returns</span> <span class="type">integer</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+  </div>
+</div>
+
 <div class="func-card" id="func-MHConst_UnlockBlpSizeLimit" data-search="MHConst_UnlockBlpSizeLimit 解除Blp大小限制">
   <div class="func-card-header">
     <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">解除Blp大小限制</div>
     <div class="func-badges">
-      <span class="badge-lib">游戏常数</span><span class="badge-desync" title="该函数只能在同步环境下调用，若在异步环境下调用该函数可能导致掉线。同时MH的异步检测日志也会默认记录该函数的调用情况">&#9888; Desync</span>
+      <span class="badge-lib">游戏常数</span>
     </div>
     <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">解除后blp大小最大为32768x32768<br></div>
     <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
@@ -28047,7 +28081,7 @@ body {
 </div>
 
 <div class="footer">
-  MemHack API Documentation &middot; Auto Generated at 2026-03-14 15:11:45 &middot; by Asphodelus
+  MemHack API Documentation &middot; Auto Generated at 2026-03-21 16:42:27 &middot; by Asphodelus
 </div>
 </div>
 </main>
