@@ -474,7 +474,7 @@ body {
 <nav class="sidebar">
   <div class="sidebar-header">
     <h1>&#128268; MemHack API</h1>
-    <div class="subtitle">JASS 接口文档 &middot; 2026-03-28</div>
+    <div class="subtitle">JASS 接口文档 &middot; 2026-04-04</div>
   </div>
   <div class="sidebar-search">
     <input type="text" id="searchInput" placeholder="&#128269; 搜索函数或常量..." oninput="filterItems(this.value)">
@@ -485,7 +485,7 @@ body {
       <div class="nav-section-title collapsed" onclick="toggleSection(this)"><span class="arrow">&#9660;</span>普通版接口</div>
       <div class="nav-items collapsed">
         <div class="nav-group">
-          <div class="nav-group-title collapsed" onclick="toggleGroup(this)" data-search="unit 单位"><span class="arrow">&#9660;</span>单位 (198)</div>
+          <div class="nav-group-title collapsed" onclick="toggleGroup(this)" data-search="unit 单位"><span class="arrow">&#9660;</span>单位 (203)</div>
           <div class="nav-items collapsed">
             <a class="nav-item" href="#func-MHUnit_EnumInRange" data-search="MHUnit_EnumInRange 选取范围内的单位做动作">选取范围内的单位做动作</a>
             <a class="nav-item" href="#func-MHUnit_EnumInRangeEx" data-search="MHUnit_EnumInRangeEx 选取圆形范围内的单位做动作">选取圆形范围内的单位做动作</a>
@@ -595,7 +595,12 @@ body {
             <a class="nav-item" href="#func-MHUnit_SetModel" data-search="MHUnit_SetModel 设置模型">设置模型</a>
             <a class="nav-item" href="#func-MHUnit_SetTeamColor" data-search="MHUnit_SetTeamColor 设置队伍颜色">设置队伍颜色</a>
             <a class="nav-item" href="#func-MHUnit_SetTeamGlow" data-search="MHUnit_SetTeamGlow 设置队伍光晕">设置队伍光晕</a>
+            <a class="nav-item" href="#func-MHUnit_GetAnimationCount" data-search="MHUnit_GetAnimationCount 获取动画数量">获取动画数量</a>
+            <a class="nav-item" href="#func-MHUnit_PlayAnimation" data-search="MHUnit_PlayAnimation 播放单位动画">播放单位动画</a>
+            <a class="nav-item" href="#func-MHUnit_PlayAnimationByIndex" data-search="MHUnit_PlayAnimationByIndex 播放单位动画 (序号)">播放单位动画 (序号)</a>
             <a class="nav-item" href="#func-MHUnit_SetAnimationByType" data-search="MHUnit_SetAnimationByType 设置单位动画">设置单位动画</a>
+            <a class="nav-item" href="#func-MHUnit_GetCurAnimation" data-search="MHUnit_GetCurAnimation 获取当前动画名">获取当前动画名</a>
+            <a class="nav-item" href="#func-MHUnit_GetCurAnimationIndex" data-search="MHUnit_GetCurAnimationIndex 获取当前动画序号">获取当前动画序号</a>
             <a class="nav-item" href="#func-MHUnit_GetAnimationProgress" data-search="MHUnit_GetAnimationProgress 获取当前动画进度">获取当前动画进度</a>
             <a class="nav-item" href="#func-MHUnit_SetAnimationProgress" data-search="MHUnit_SetAnimationProgress 设置当前动画进度">设置当前动画进度</a>
             <a class="nav-item" href="#func-MHUnit_Morph" data-search="MHUnit_Morph 变身">变身</a>
@@ -1192,6 +1197,62 @@ body {
           </div>
         </div>
         <div class="nav-group">
+          <div class="nav-group-title collapsed" onclick="toggleGroup(this)" data-search="effect 特效"><span class="arrow">&#9660;</span>特效 (51)</div>
+          <div class="nav-items collapsed">
+            <a class="nav-item" href="#func-MHEffect_GetX" data-search="MHEffect_GetX 获取X坐标">获取X坐标</a>
+            <a class="nav-item" href="#func-MHEffect_GetY" data-search="MHEffect_GetY 获取Y坐标">获取Y坐标</a>
+            <a class="nav-item" href="#func-MHEffect_GetZ" data-search="MHEffect_GetZ 获取Z坐标">获取Z坐标</a>
+            <a class="nav-item" href="#func-MHEffect_SetX" data-search="MHEffect_SetX 设置X坐标">设置X坐标</a>
+            <a class="nav-item" href="#func-MHEffect_SetY" data-search="MHEffect_SetY 设置Y坐标">设置Y坐标</a>
+            <a class="nav-item" href="#func-MHEffect_SetZ" data-search="MHEffect_SetZ 设置Z坐标">设置Z坐标</a>
+            <a class="nav-item" href="#func-MHEffect_SetPosition" data-search="MHEffect_SetPosition 设置三轴坐标">设置三轴坐标</a>
+            <a class="nav-item" href="#func-MHEffect_SetRoll" data-search="MHEffect_SetRoll 设置绕X轴转角">设置绕X轴转角</a>
+            <a class="nav-item" href="#func-MHEffect_SetPitch" data-search="MHEffect_SetPitch 设置绕Y轴转角">设置绕Y轴转角</a>
+            <a class="nav-item" href="#func-MHEffect_SetYaw" data-search="MHEffect_SetYaw 设置绕Z轴转角">设置绕Z轴转角</a>
+            <a class="nav-item" href="#func-MHEffect_Rotate" data-search="MHEffect_Rotate 设置自转角">设置自转角</a>
+            <a class="nav-item" href="#func-MHEffect_Rotation" data-search="MHEffect_Rotation 获取自转角">获取自转角</a>
+            <a class="nav-item" href="#func-MHEffect_SetVector" data-search="MHEffect_SetVector 设置方向向量">设置方向向量</a>
+            <a class="nav-item" href="#func-MHEffect_GetVectorX" data-search="MHEffect_GetVectorX 获取方向向量X坐标">获取方向向量X坐标</a>
+            <a class="nav-item" href="#func-MHEffect_GetVectorY" data-search="MHEffect_GetVectorY 获取方向向量Y坐标">获取方向向量Y坐标</a>
+            <a class="nav-item" href="#func-MHEffect_GetVectorZ" data-search="MHEffect_GetVectorZ 获取方向向量Z坐标">获取方向向量Z坐标</a>
+            <a class="nav-item" href="#func-MHEffect_Towards" data-search="MHEffect_Towards 设置朝向">设置朝向</a>
+            <a class="nav-item" href="#func-MHEffect_SetMirror" data-search="MHEffect_SetMirror 镜像操作">镜像操作</a>
+            <a class="nav-item" href="#func-MHEffect_SetScale" data-search="MHEffect_SetScale 设置缩放">设置缩放</a>
+            <a class="nav-item" href="#func-MHEffect_SetScaleEx" data-search="MHEffect_SetScaleEx 设置三轴缩放">设置三轴缩放</a>
+            <a class="nav-item" href="#func-MHEffect_SetParticleScale" data-search="MHEffect_SetParticleScale 设置粒子缩放">设置粒子缩放</a>
+            <a class="nav-item" href="#func-MHEffect_ResetMatrix" data-search="MHEffect_ResetMatrix 重置变换">重置变换</a>
+            <a class="nav-item" href="#func-MHEffect_SetModel" data-search="MHEffect_SetModel 设置模型">设置模型</a>
+            <a class="nav-item" href="#func-MHEffect_SetTeamColor" data-search="MHEffect_SetTeamColor 设置队伍颜色">设置队伍颜色</a>
+            <a class="nav-item" href="#func-MHEffect_SetTeamGlow" data-search="MHEffect_SetTeamGlow 设置队伍光晕">设置队伍光晕</a>
+            <a class="nav-item" href="#func-MHEffect_Hide" data-search="MHEffect_Hide 隐藏">隐藏</a>
+            <a class="nav-item" href="#func-MHEffect_IsHidden" data-search="MHEffect_IsHidden 被隐藏">被隐藏</a>
+            <a class="nav-item" href="#func-MHEffect_SetAlpha" data-search="MHEffect_SetAlpha 设置透明度">设置透明度</a>
+            <a class="nav-item" href="#func-MHEffect_SetColor" data-search="MHEffect_SetColor 设置颜色">设置颜色</a>
+            <a class="nav-item" href="#func-MHEffect_SetColorEx" data-search="MHEffect_SetColorEx 设置颜色 (ARGB)">设置颜色 (ARGB)</a>
+            <a class="nav-item" href="#func-MHEffect_GetAnimationCount" data-search="MHEffect_GetAnimationCount 获取动画数量">获取动画数量</a>
+            <a class="nav-item" href="#func-MHEffect_PlayAnimation" data-search="MHEffect_PlayAnimation 播放动画">播放动画</a>
+            <a class="nav-item" href="#func-MHEffect_PlayAnimationByIndex" data-search="MHEffect_PlayAnimationByIndex 播放动画 (序号)">播放动画 (序号)</a>
+            <a class="nav-item" href="#func-MHEffect_SetAnimation" data-search="MHEffect_SetAnimation 播放动画">播放动画</a>
+            <a class="nav-item" href="#func-MHEffect_SetAnimationByName" data-search="MHEffect_SetAnimationByName 播放动画 (按名字)">播放动画 (按名字)</a>
+            <a class="nav-item" href="#func-MHEffect_SetAnimationByType" data-search="MHEffect_SetAnimationByType 播放动画 (按类型)">播放动画 (按类型)</a>
+            <a class="nav-item" href="#func-MHEffect_GetCurAnimation" data-search="MHEffect_GetCurAnimation 获取当前动画名">获取当前动画名</a>
+            <a class="nav-item" href="#func-MHEffect_GetCurAnimationIndex" data-search="MHEffect_GetCurAnimationIndex 获取当前动画序号">获取当前动画序号</a>
+            <a class="nav-item" href="#func-MHEffect_GetAnimationProgress" data-search="MHEffect_GetAnimationProgress 获取动画进度">获取动画进度</a>
+            <a class="nav-item" href="#func-MHEffect_SetAnimationProgress" data-search="MHEffect_SetAnimationProgress 设置动画进度">设置动画进度</a>
+            <a class="nav-item" href="#func-MHEffect_SetTimeScale" data-search="MHEffect_SetTimeScale 设置动画速度">设置动画速度</a>
+            <a class="nav-item" href="#func-MHEffect_BindToWidget" data-search="MHEffect_BindToWidget 绑定到单位">绑定到单位</a>
+            <a class="nav-item" href="#func-MHEffect_BindToEffect" data-search="MHEffect_BindToEffect 绑定到特效">绑定到特效</a>
+            <a class="nav-item" href="#func-MHEffect_BindToFrame" data-search="MHEffect_BindToFrame 绑定到Frame">绑定到Frame</a>
+            <a class="nav-item" href="#func-MHEffect_Unbind" data-search="MHEffect_Unbind 从物体上解绑">从物体上解绑</a>
+            <a class="nav-item" href="#func-MHEffect_EnumInRange" data-search="MHEffect_EnumInRange 选取特效做动作">选取特效做动作</a>
+            <a class="nav-item" href="#func-MHEffect_EnumInRangeEx" data-search="MHEffect_EnumInRangeEx 选取特效做动作">选取特效做动作</a>
+            <a class="nav-item" href="#func-MHEffect_GetEnumEffect" data-search="MHEffect_GetEnumEffect 获取选取的特效">获取选取的特效</a>
+            <a class="nav-item" href="#func-MHEffect_ForceRender" data-search="MHEffect_ForceRender 强制渲染">强制渲染</a>
+            <a class="nav-item" href="#func-MHEffect_SwitchRender" data-search="MHEffect_SwitchRender 开关特效渲染">开关特效渲染</a>
+            <a class="nav-item" href="#func-MHEffect_SwitchExclude" data-search="MHEffect_SwitchExclude 除外特效渲染">除外特效渲染</a>
+          </div>
+        </div>
+        <div class="nav-group">
           <div class="nav-group-title collapsed" onclick="toggleGroup(this)" data-search="hashtable 哈希表"><span class="arrow">&#9660;</span>哈希表 (47)</div>
           <div class="nav-items collapsed">
             <a class="nav-item" href="#func-MHHashtable_EnumInteger" data-search="MHHashtable_EnumInteger 遍历哈希表 (整数)">遍历哈希表 (整数)</a>
@@ -1241,57 +1302,6 @@ body {
             <a class="nav-item" href="#func-MHHashtableChangeEvent_SetNewValueBool" data-search="MHHashtableChangeEvent_SetNewValueBool 设置变动的布尔值哈希项新值">设置变动的布尔值哈希项新值</a>
             <a class="nav-item" href="#func-MHHashtableChangeEvent_SetNewValueStr" data-search="MHHashtableChangeEvent_SetNewValueStr 设置变动的字符串哈希项新值">设置变动的字符串哈希项新值</a>
             <a class="nav-item" href="#func-MHHashtableChangeEvent_GetType" data-search="MHHashtableChangeEvent_GetType 获取变动的哈希项类型">获取变动的哈希项类型</a>
-          </div>
-        </div>
-        <div class="nav-group">
-          <div class="nav-group-title collapsed" onclick="toggleGroup(this)" data-search="effect 特效"><span class="arrow">&#9660;</span>特效 (46)</div>
-          <div class="nav-items collapsed">
-            <a class="nav-item" href="#func-MHEffect_GetX" data-search="MHEffect_GetX 获取X坐标">获取X坐标</a>
-            <a class="nav-item" href="#func-MHEffect_GetY" data-search="MHEffect_GetY 获取Y坐标">获取Y坐标</a>
-            <a class="nav-item" href="#func-MHEffect_GetZ" data-search="MHEffect_GetZ 获取Z坐标">获取Z坐标</a>
-            <a class="nav-item" href="#func-MHEffect_SetX" data-search="MHEffect_SetX 设置X坐标">设置X坐标</a>
-            <a class="nav-item" href="#func-MHEffect_SetY" data-search="MHEffect_SetY 设置Y坐标">设置Y坐标</a>
-            <a class="nav-item" href="#func-MHEffect_SetZ" data-search="MHEffect_SetZ 设置Z坐标">设置Z坐标</a>
-            <a class="nav-item" href="#func-MHEffect_SetPosition" data-search="MHEffect_SetPosition 设置三轴坐标">设置三轴坐标</a>
-            <a class="nav-item" href="#func-MHEffect_SetRoll" data-search="MHEffect_SetRoll 设置绕X轴转角">设置绕X轴转角</a>
-            <a class="nav-item" href="#func-MHEffect_SetPitch" data-search="MHEffect_SetPitch 设置绕Y轴转角">设置绕Y轴转角</a>
-            <a class="nav-item" href="#func-MHEffect_SetYaw" data-search="MHEffect_SetYaw 设置绕Z轴转角">设置绕Z轴转角</a>
-            <a class="nav-item" href="#func-MHEffect_Rotate" data-search="MHEffect_Rotate 设置自转角">设置自转角</a>
-            <a class="nav-item" href="#func-MHEffect_Rotation" data-search="MHEffect_Rotation 获取自转角">获取自转角</a>
-            <a class="nav-item" href="#func-MHEffect_SetVector" data-search="MHEffect_SetVector 设置方向向量">设置方向向量</a>
-            <a class="nav-item" href="#func-MHEffect_GetVectorX" data-search="MHEffect_GetVectorX 获取方向向量X坐标">获取方向向量X坐标</a>
-            <a class="nav-item" href="#func-MHEffect_GetVectorY" data-search="MHEffect_GetVectorY 获取方向向量Y坐标">获取方向向量Y坐标</a>
-            <a class="nav-item" href="#func-MHEffect_GetVectorZ" data-search="MHEffect_GetVectorZ 获取方向向量Z坐标">获取方向向量Z坐标</a>
-            <a class="nav-item" href="#func-MHEffect_Towards" data-search="MHEffect_Towards 设置朝向">设置朝向</a>
-            <a class="nav-item" href="#func-MHEffect_SetMirror" data-search="MHEffect_SetMirror 镜像操作">镜像操作</a>
-            <a class="nav-item" href="#func-MHEffect_SetScale" data-search="MHEffect_SetScale 设置缩放">设置缩放</a>
-            <a class="nav-item" href="#func-MHEffect_SetScaleEx" data-search="MHEffect_SetScaleEx 设置三轴缩放">设置三轴缩放</a>
-            <a class="nav-item" href="#func-MHEffect_SetParticleScale" data-search="MHEffect_SetParticleScale 设置粒子缩放">设置粒子缩放</a>
-            <a class="nav-item" href="#func-MHEffect_ResetMatrix" data-search="MHEffect_ResetMatrix 重置变换">重置变换</a>
-            <a class="nav-item" href="#func-MHEffect_SetModel" data-search="MHEffect_SetModel 设置模型">设置模型</a>
-            <a class="nav-item" href="#func-MHEffect_SetTeamColor" data-search="MHEffect_SetTeamColor 设置队伍颜色">设置队伍颜色</a>
-            <a class="nav-item" href="#func-MHEffect_SetTeamGlow" data-search="MHEffect_SetTeamGlow 设置队伍光晕">设置队伍光晕</a>
-            <a class="nav-item" href="#func-MHEffect_Hide" data-search="MHEffect_Hide 隐藏">隐藏</a>
-            <a class="nav-item" href="#func-MHEffect_IsHidden" data-search="MHEffect_IsHidden 被隐藏">被隐藏</a>
-            <a class="nav-item" href="#func-MHEffect_SetAlpha" data-search="MHEffect_SetAlpha 设置透明度">设置透明度</a>
-            <a class="nav-item" href="#func-MHEffect_SetColor" data-search="MHEffect_SetColor 设置颜色">设置颜色</a>
-            <a class="nav-item" href="#func-MHEffect_SetColorEx" data-search="MHEffect_SetColorEx 设置颜色 (ARGB)">设置颜色 (ARGB)</a>
-            <a class="nav-item" href="#func-MHEffect_SetAnimation" data-search="MHEffect_SetAnimation 播放动画">播放动画</a>
-            <a class="nav-item" href="#func-MHEffect_SetAnimationByName" data-search="MHEffect_SetAnimationByName 播放动画 (按名字)">播放动画 (按名字)</a>
-            <a class="nav-item" href="#func-MHEffect_SetAnimationByType" data-search="MHEffect_SetAnimationByType 播放动画 (按类型)">播放动画 (按类型)</a>
-            <a class="nav-item" href="#func-MHEffect_GetAnimationProgress" data-search="MHEffect_GetAnimationProgress 获取动画进度">获取动画进度</a>
-            <a class="nav-item" href="#func-MHEffect_SetAnimationProgress" data-search="MHEffect_SetAnimationProgress 设置动画进度">设置动画进度</a>
-            <a class="nav-item" href="#func-MHEffect_SetTimeScale" data-search="MHEffect_SetTimeScale 设置动画速度">设置动画速度</a>
-            <a class="nav-item" href="#func-MHEffect_BindToWidget" data-search="MHEffect_BindToWidget 绑定到单位">绑定到单位</a>
-            <a class="nav-item" href="#func-MHEffect_BindToEffect" data-search="MHEffect_BindToEffect 绑定到特效">绑定到特效</a>
-            <a class="nav-item" href="#func-MHEffect_BindToFrame" data-search="MHEffect_BindToFrame 绑定到Frame">绑定到Frame</a>
-            <a class="nav-item" href="#func-MHEffect_Unbind" data-search="MHEffect_Unbind 从物体上解绑">从物体上解绑</a>
-            <a class="nav-item" href="#func-MHEffect_EnumInRange" data-search="MHEffect_EnumInRange 选取特效做动作">选取特效做动作</a>
-            <a class="nav-item" href="#func-MHEffect_EnumInRangeEx" data-search="MHEffect_EnumInRangeEx 选取特效做动作">选取特效做动作</a>
-            <a class="nav-item" href="#func-MHEffect_GetEnumEffect" data-search="MHEffect_GetEnumEffect 获取选取的特效">获取选取的特效</a>
-            <a class="nav-item" href="#func-MHEffect_ForceRender" data-search="MHEffect_ForceRender 强制渲染">强制渲染</a>
-            <a class="nav-item" href="#func-MHEffect_SwitchRender" data-search="MHEffect_SwitchRender 开关特效渲染">开关特效渲染</a>
-            <a class="nav-item" href="#func-MHEffect_SwitchExclude" data-search="MHEffect_SwitchExclude 除外特效渲染">除外特效渲染</a>
           </div>
         </div>
         <div class="nav-group">
@@ -2006,7 +2016,7 @@ body {
 <div class="section" id="section-funcs">
 <h2 class="section-title"><span class="icon">&#9889;</span> 函数接口</h2>
 
-<h3 id="cat-unit" style="color:var(--accent-cyan);margin:24px 0 12px 0;font-size:1.1em;">&#128194; 单位 (unit) - 198 个接口</h3>
+<h3 id="cat-unit" style="color:var(--accent-cyan);margin:24px 0 12px 0;font-size:1.1em;">&#128194; 单位 (unit) - 203 个接口</h3>
 
 <div class="func-card" id="func-MHUnit_EnumInRange" data-search="MHUnit_EnumInRange 选取范围内的单位做动作">
   <div class="func-card-header">
@@ -4222,6 +4232,71 @@ body {
   </div>
 </div>
 
+<div class="func-card" id="func-MHUnit_GetAnimationCount" data-search="MHUnit_GetAnimationCount 获取动画数量">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">获取动画数量</div>
+    <div class="func-badges">
+      <span class="badge-lib">单位</span>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHUnit_GetAnimationCount</span> <span class="kw">takes</span> <span class="type">unit</span> <span class="param-name">u</span> <span class="kw">returns</span> <span class="type">integer</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">u</span> <span class="p-desc">&mdash; 单位</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHUnit_PlayAnimation" data-search="MHUnit_PlayAnimation 播放单位动画">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">播放单位动画</div>
+    <div class="func-badges">
+      <span class="badge-lib">单位</span><span class="badge-desync" title="该函数只能在同步环境下调用，若在异步环境下调用该函数可能导致掉线。同时MH的异步检测日志也会默认记录该函数的调用情况">&#9888; Desync</span>
+    </div>
+    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">该函数会调用随机数, 不可在异步环境中使用<br></div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHUnit_PlayAnimation</span> <span class="kw">takes</span> <span class="type">unit</span> <span class="param-name">u</span>, <span class="type">string</span> <span class="param-name">animation</span>, <span class="type">real</span> <span class="param-name">progress</span>, <span class="type">boolean</span> <span class="param-name">looping</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">u</span> <span class="p-desc">&mdash; 单位</span></li>
+      <li><span class="p-name">animation</span> <span class="p-desc">&mdash; 动画名</span></li>
+      <li><span class="p-name">progress</span> <span class="p-desc">&mdash; 进度</span></li>
+      <li><span class="p-name">looping</span> <span class="p-desc">&mdash; 是否循环</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHUnit_PlayAnimationByIndex" data-search="MHUnit_PlayAnimationByIndex 播放单位动画 (序号)">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">播放单位动画 (序号)</div>
+    <div class="func-badges">
+      <span class="badge-lib">单位</span><span class="badge-desync" title="该函数只能在同步环境下调用，若在异步环境下调用该函数可能导致掉线。同时MH的异步检测日志也会默认记录该函数的调用情况">&#9888; Desync</span>
+    </div>
+    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">该函数会调用随机数, 不可在异步环境中使用<br></div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHUnit_PlayAnimationByIndex</span> <span class="kw">takes</span> <span class="type">unit</span> <span class="param-name">u</span>, <span class="type">integer</span> <span class="param-name">index</span>, <span class="type">real</span> <span class="param-name">progress</span>, <span class="type">boolean</span> <span class="param-name">looping</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">u</span> <span class="p-desc">&mdash; 单位</span></li>
+      <li><span class="p-name">index</span> <span class="p-desc">&mdash; 动画序号</span></li>
+      <li><span class="p-name">progress</span> <span class="p-desc">&mdash; 进度</span></li>
+      <li><span class="p-name">looping</span> <span class="p-desc">&mdash; 是否循环</span></li>
+    </ul>
+  </div>
+</div>
+
 <div class="func-card" id="func-MHUnit_SetAnimationByType" data-search="MHUnit_SetAnimationByType 设置单位动画">
   <div class="func-card-header">
     <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置单位动画</div>
@@ -4239,6 +4314,46 @@ body {
       <li><span class="p-name">u</span> <span class="p-desc">&mdash; 单位</span></li>
       <li><span class="p-name">anim</span> <span class="p-desc">&mdash; 动画类型</span> <a class="p-ref" href="#enum-ANIM_TYPE">[参考 ANIM_TYPE]</a></li>
       <li><span class="p-name">is_loop</span> <span class="p-desc">&mdash; 是否循环</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHUnit_GetCurAnimation" data-search="MHUnit_GetCurAnimation 获取当前动画名">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">获取当前动画名</div>
+    <div class="func-badges">
+      <span class="badge-lib">单位</span>
+    </div>
+    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">获取到的动画名可参考绿苹果中动画列表中的动画名<br></div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHUnit_GetCurAnimation</span> <span class="kw">takes</span> <span class="type">unit</span> <span class="param-name">u</span> <span class="kw">returns</span> <span class="type">string</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">u</span> <span class="p-desc">&mdash; 单位</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHUnit_GetCurAnimationIndex" data-search="MHUnit_GetCurAnimationIndex 获取当前动画序号">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">获取当前动画序号</div>
+    <div class="func-badges">
+      <span class="badge-lib">单位</span>
+    </div>
+    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">可以直接用于SetUnitAnimationByIndex<br></div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHUnit_GetCurAnimationIndex</span> <span class="kw">takes</span> <span class="type">unit</span> <span class="param-name">u</span> <span class="kw">returns</span> <span class="type">integer</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">u</span> <span class="p-desc">&mdash; 单位</span></li>
     </ul>
   </div>
 </div>
@@ -15704,6 +15819,1059 @@ body {
   </div>
 </div>
 
+<h3 id="cat-effect" style="color:var(--accent-cyan);margin:24px 0 12px 0;font-size:1.1em;">&#128194; 特效 (effect) - 51 个接口</h3>
+
+<div class="func-card" id="func-MHEffect_GetX" data-search="MHEffect_GetX 获取X坐标">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">获取X坐标</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_GetX</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span> <span class="kw">returns</span> <span class="type">real</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_GetY" data-search="MHEffect_GetY 获取Y坐标">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">获取Y坐标</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_GetY</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span> <span class="kw">returns</span> <span class="type">real</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_GetZ" data-search="MHEffect_GetZ 获取Z坐标">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">获取Z坐标</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_GetZ</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span> <span class="kw">returns</span> <span class="type">real</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_SetX" data-search="MHEffect_SetX 设置X坐标">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置X坐标</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetX</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">real</span> <span class="param-name">value</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">value</span> <span class="p-desc">&mdash; X坐标</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_SetY" data-search="MHEffect_SetY 设置Y坐标">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置Y坐标</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetY</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">real</span> <span class="param-name">value</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">value</span> <span class="p-desc">&mdash; Y坐标</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_SetZ" data-search="MHEffect_SetZ 设置Z坐标">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置Z坐标</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetZ</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">real</span> <span class="param-name">value</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">value</span> <span class="p-desc">&mdash; Z坐标</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_SetPosition" data-search="MHEffect_SetPosition 设置三轴坐标">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置三轴坐标</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetPosition</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">real</span> <span class="param-name">x</span>, <span class="type">real</span> <span class="param-name">y</span>, <span class="type">real</span> <span class="param-name">z</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">x</span> <span class="p-desc">&mdash; 三轴坐标</span></li>
+      <li><span class="p-name">y</span> <span class="p-desc">&mdash; y</span></li>
+      <li><span class="p-name">z</span> <span class="p-desc">&mdash; z</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_SetRoll" data-search="MHEffect_SetRoll 设置绕X轴转角">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置绕X轴转角</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">多次调用会累加<br></div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetRoll</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">real</span> <span class="param-name">deg</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">deg</span> <span class="p-desc">&mdash; 绕X轴转角</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_SetPitch" data-search="MHEffect_SetPitch 设置绕Y轴转角">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置绕Y轴转角</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">多次调用会累加<br></div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetPitch</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">real</span> <span class="param-name">deg</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">deg</span> <span class="p-desc">&mdash; 绕Y轴转角</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_SetYaw" data-search="MHEffect_SetYaw 设置绕Z轴转角">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置绕Z轴转角</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">多次调用会累加<br></div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetYaw</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">real</span> <span class="param-name">deg</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">deg</span> <span class="p-desc">&mdash; 绕Z轴转角</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_Rotate" data-search="MHEffect_Rotate 设置自转角">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置自转角</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">多次调用会累加. 右手螺旋定则<br></div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_Rotate</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">real</span> <span class="param-name">deg</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">deg</span> <span class="p-desc">&mdash; 自转角</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_Rotation" data-search="MHEffect_Rotation 获取自转角">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">获取自转角</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_Rotation</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span> <span class="kw">returns</span> <span class="type">real</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_SetVector" data-search="MHEffect_SetVector 设置方向向量">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置方向向量</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">向量形式<br>(1, 0, 0)表示初始朝向 (正东)<br>不需要归一化<br></div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetVector</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">real</span> <span class="param-name">xv</span>, <span class="type">real</span> <span class="param-name">yv</span>, <span class="type">real</span> <span class="param-name">zv</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">xv</span> <span class="p-desc">&mdash; 方向向量</span></li>
+      <li><span class="p-name">yv</span> <span class="p-desc">&mdash; yv</span></li>
+      <li><span class="p-name">zv</span> <span class="p-desc">&mdash; zv</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_GetVectorX" data-search="MHEffect_GetVectorX 获取方向向量X坐标">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">获取方向向量X坐标</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">向量形式. (1, 0, 0) 表示初始方向 (正东)<br>已归一化<br></div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_GetVectorX</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span> <span class="kw">returns</span> <span class="type">real</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_GetVectorY" data-search="MHEffect_GetVectorY 获取方向向量Y坐标">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">获取方向向量Y坐标</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">向量形式. (1, 0, 0) 表示初始方向 (正东)<br>已归一化<br></div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_GetVectorY</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span> <span class="kw">returns</span> <span class="type">real</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_GetVectorZ" data-search="MHEffect_GetVectorZ 获取方向向量Z坐标">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">获取方向向量Z坐标</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">向量形式. (1, 0, 0) 表示初始方向 (正东)<br>已归一化<br></div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_GetVectorZ</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span> <span class="kw">returns</span> <span class="type">real</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_Towards" data-search="MHEffect_Towards 设置朝向">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置朝向</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">直接让特效指向目标点<br></div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_Towards</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">real</span> <span class="param-name">target_x</span>, <span class="type">real</span> <span class="param-name">target_y</span>, <span class="type">real</span> <span class="param-name">target_z</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">target_x</span> <span class="p-desc">&mdash; 目标点X坐标</span></li>
+      <li><span class="p-name">target_y</span> <span class="p-desc">&mdash; 目标点Y坐标</span></li>
+      <li><span class="p-name">target_z</span> <span class="p-desc">&mdash; 目标点Z坐标</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_SetMirror" data-search="MHEffect_SetMirror 镜像操作">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">镜像操作</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetMirror</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">integer</span> <span class="param-name">axis</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">axis</span> <span class="p-desc">&mdash; 镜像轴</span> <a class="p-ref" href="#enum-MIRROR_AXIS">[参考 MIRROR_AXIS]</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_SetScale" data-search="MHEffect_SetScale 设置缩放">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置缩放</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetScale</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">real</span> <span class="param-name">scale</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">scale</span> <span class="p-desc">&mdash; 缩放</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_SetScaleEx" data-search="MHEffect_SetScaleEx 设置三轴缩放">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置三轴缩放</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetScaleEx</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">real</span> <span class="param-name">x</span>, <span class="type">real</span> <span class="param-name">y</span>, <span class="type">real</span> <span class="param-name">z</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">x</span> <span class="p-desc">&mdash; x轴缩放</span></li>
+      <li><span class="p-name">y</span> <span class="p-desc">&mdash; y轴缩放</span></li>
+      <li><span class="p-name">z</span> <span class="p-desc">&mdash; z轴缩放</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_SetParticleScale" data-search="MHEffect_SetParticleScale 设置粒子缩放">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置粒子缩放</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">多次设置会乘算叠加<br></div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetParticleScale</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">real</span> <span class="param-name">scale</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">scale</span> <span class="p-desc">&mdash; 粒子缩放</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_ResetMatrix" data-search="MHEffect_ResetMatrix 重置变换">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">重置变换</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">方向和大小重置到初始状态<br></div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_ResetMatrix</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_SetModel" data-search="MHEffect_SetModel 设置模型">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置模型</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetModel</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">string</span> <span class="param-name">model_path</span>, <span class="type">boolean</span> <span class="param-name">flag</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">model_path</span> <span class="p-desc">&mdash; 模型</span></li>
+      <li><span class="p-name">flag</span> <span class="p-desc">&mdash; 参数</span> <span class="p-desc">(作用未知)</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_SetTeamColor" data-search="MHEffect_SetTeamColor 设置队伍颜色">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置队伍颜色</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetTeamColor</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">playercolor</span> <span class="param-name">color</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">color</span> <span class="p-desc">&mdash; 队伍颜色</span> <a class="p-ref" href="#enum-playercolor">[参考 playercolor]</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_SetTeamGlow" data-search="MHEffect_SetTeamGlow 设置队伍光晕">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置队伍光晕</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetTeamGlow</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">playercolor</span> <span class="param-name">glow</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">glow</span> <span class="p-desc">&mdash; 队伍光晕</span> <a class="p-ref" href="#enum-playercolor">[参考 playercolor]</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_Hide" data-search="MHEffect_Hide 隐藏">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">隐藏</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_Hide</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">boolean</span> <span class="param-name">is_hide</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">is_hide</span> <span class="p-desc">&mdash; 是否隐藏</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_IsHidden" data-search="MHEffect_IsHidden 被隐藏">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">被隐藏</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_IsHidden</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_SetAlpha" data-search="MHEffect_SetAlpha 设置透明度">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置透明度</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">取值范围0~255<br></div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetAlpha</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">integer</span> <span class="param-name">alpha</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">alpha</span> <span class="p-desc">&mdash; 透明度</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_SetColor" data-search="MHEffect_SetColor 设置颜色">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置颜色</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetColor</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">integer</span> <span class="param-name">color</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">color</span> <span class="p-desc">&mdash; 颜色</span> <span class="p-desc">(ARGB16进制颜色代码)</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_SetColorEx" data-search="MHEffect_SetColorEx 设置颜色 (ARGB)">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置颜色 (ARGB)</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">颜色值的取值范围与物编中相同<br></div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetColorEx</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">integer</span> <span class="param-name">alpha</span>, <span class="type">integer</span> <span class="param-name">red</span>, <span class="type">integer</span> <span class="param-name">green</span>, <span class="type">integer</span> <span class="param-name">blue</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">alpha</span> <span class="p-desc">&mdash; 透明度</span></li>
+      <li><span class="p-name">red</span> <span class="p-desc">&mdash; 红色值</span></li>
+      <li><span class="p-name">green</span> <span class="p-desc">&mdash; 绿色值</span></li>
+      <li><span class="p-name">blue</span> <span class="p-desc">&mdash; 蓝色值</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_GetAnimationCount" data-search="MHEffect_GetAnimationCount 获取动画数量">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">获取动画数量</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span><span class="badge-desync" title="该函数只能在同步环境下调用，若在异步环境下调用该函数可能导致掉线。同时MH的异步检测日志也会默认记录该函数的调用情况">&#9888; Desync</span>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_GetAnimationCount</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span> <span class="kw">returns</span> <span class="type">integer</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_PlayAnimation" data-search="MHEffect_PlayAnimation 播放动画">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">播放动画</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span><span class="badge-desync" title="该函数只能在同步环境下调用，若在异步环境下调用该函数可能导致掉线。同时MH的异步检测日志也会默认记录该函数的调用情况">&#9888; Desync</span>
+    </div>
+    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">该动作会调用随机数, 不可在异步环境中使用<br></div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_PlayAnimation</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">string</span> <span class="param-name">animation</span>, <span class="type">real</span> <span class="param-name">progress</span>, <span class="type">boolean</span> <span class="param-name">looping</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">animation</span> <span class="p-desc">&mdash; 动画名称</span></li>
+      <li><span class="p-name">progress</span> <span class="p-desc">&mdash; 进度</span> <span class="p-desc">(0~1)</span></li>
+      <li><span class="p-name">looping</span> <span class="p-desc">&mdash; 是否循环</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_PlayAnimationByIndex" data-search="MHEffect_PlayAnimationByIndex 播放动画 (序号)">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">播放动画 (序号)</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span><span class="badge-desync" title="该函数只能在同步环境下调用，若在异步环境下调用该函数可能导致掉线。同时MH的异步检测日志也会默认记录该函数的调用情况">&#9888; Desync</span>
+    </div>
+    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">该动作会调用随机数, 不可在异步环境中使用<br></div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_PlayAnimationByIndex</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">integer</span> <span class="param-name">index</span>, <span class="type">real</span> <span class="param-name">progress</span>, <span class="type">boolean</span> <span class="param-name">looping</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">index</span> <span class="p-desc">&mdash; 动画序号</span></li>
+      <li><span class="p-name">progress</span> <span class="p-desc">&mdash; 进度</span> <span class="p-desc">(0~1)</span></li>
+      <li><span class="p-name">looping</span> <span class="p-desc">&mdash; 是否循环</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_SetAnimation" data-search="MHEffect_SetAnimation 播放动画">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">播放动画</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetAnimation</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">integer</span> <span class="param-name">index</span>, <span class="type">integer</span> <span class="param-name">rarity</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">index</span> <span class="p-desc">&mdash; 动画</span></li>
+      <li><span class="p-name">rarity</span> <span class="p-desc">&mdash; 概率</span> <span class="p-desc">(0: 普通概率, 1: 罕见概率)</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_SetAnimationByName" data-search="MHEffect_SetAnimationByName 播放动画 (按名字)">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">播放动画 (按名字)</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetAnimationByName</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">string</span> <span class="param-name">name</span>, <span class="type">string</span> <span class="param-name">attachment</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">name</span> <span class="p-desc">&mdash; 动画</span></li>
+      <li><span class="p-name">attachment</span> <span class="p-desc">&mdash; 附加链接动画名</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_SetAnimationByType" data-search="MHEffect_SetAnimationByType 播放动画 (按类型)">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">播放动画 (按类型)</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetAnimationByType</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">integer</span> <span class="param-name">anim_type</span>, <span class="type">boolean</span> <span class="param-name">looping</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">anim_type</span> <span class="p-desc">&mdash; 动画类型</span> <a class="p-ref" href="#enum-ANIM_TYPE">[参考 ANIM_TYPE]</a></li>
+      <li><span class="p-name">looping</span> <span class="p-desc">&mdash; 是否循环</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_GetCurAnimation" data-search="MHEffect_GetCurAnimation 获取当前动画名">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">获取当前动画名</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">获取到的动画名可参考绿苹果中动画列表中的动画名<br></div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_GetCurAnimation</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span> <span class="kw">returns</span> <span class="type">string</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_GetCurAnimationIndex" data-search="MHEffect_GetCurAnimationIndex 获取当前动画序号">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">获取当前动画序号</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_GetCurAnimationIndex</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span> <span class="kw">returns</span> <span class="type">integer</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_GetAnimationProgress" data-search="MHEffect_GetAnimationProgress 获取动画进度">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">获取动画进度</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_GetAnimationProgress</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span> <span class="kw">returns</span> <span class="type">real</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+    </ul>
+    <div class="func-return-title">返回值</div>
+    <div class="func-return-info"><span class="r-desc">0~1</span></div>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_SetAnimationProgress" data-search="MHEffect_SetAnimationProgress 设置动画进度">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置动画进度</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">取值范围0~1<br></div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetAnimationProgress</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">real</span> <span class="param-name">progress</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">progress</span> <span class="p-desc">&mdash; 动画进度</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_SetTimeScale" data-search="MHEffect_SetTimeScale 设置动画速度">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置动画速度</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">取值范围0~1<br></div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetTimeScale</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">real</span> <span class="param-name">scale</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">scale</span> <span class="p-desc">&mdash; 动画速度</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_BindToWidget" data-search="MHEffect_BindToWidget 绑定到单位">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">绑定到单位</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_BindToWidget</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">widget</span> <span class="param-name">target</span>, <span class="type">string</span> <span class="param-name">attach_name</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">target</span> <span class="p-desc">&mdash; 目标单位/物品/可破坏物</span></li>
+      <li><span class="p-name">attach_name</span> <span class="p-desc">&mdash; 附加点</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_BindToEffect" data-search="MHEffect_BindToEffect 绑定到特效">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">绑定到特效</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_BindToEffect</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">effect</span> <span class="param-name">target</span>, <span class="type">string</span> <span class="param-name">attach_name</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">target</span> <span class="p-desc">&mdash; 目标特效</span></li>
+      <li><span class="p-name">attach_name</span> <span class="p-desc">&mdash; 附加点</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_BindToFrame" data-search="MHEffect_BindToFrame 绑定到Frame">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">绑定到Frame</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">仅支持CSpriteFrame和CPortraitButton<br></div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_BindToFrame</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">integer</span> <span class="param-name">frame</span>, <span class="type">string</span> <span class="param-name">attach_name</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">frame</span> <span class="p-desc">&mdash; 目标Frame</span></li>
+      <li><span class="p-name">attach_name</span> <span class="p-desc">&mdash; 附加点</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_Unbind" data-search="MHEffect_Unbind 从物体上解绑">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">从物体上解绑</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_Unbind</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 解绑</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_EnumInRange" data-search="MHEffect_EnumInRange 选取特效做动作">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">选取特效做动作</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_EnumInRange</span> <span class="kw">takes</span> <span class="type">real</span> <span class="param-name">x</span>, <span class="type">real</span> <span class="param-name">y</span>, <span class="type">real</span> <span class="param-name">range</span>, <span class="type">code</span> <span class="param-name">callback</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">x</span> <span class="p-desc">&mdash; 圆心x</span></li>
+      <li><span class="p-name">y</span> <span class="p-desc">&mdash; 圆心y</span></li>
+      <li><span class="p-name">range</span> <span class="p-desc">&mdash; 选取半径</span></li>
+      <li><span class="p-name">callback</span> <span class="p-desc">&mdash; 回调函数</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_EnumInRangeEx" data-search="MHEffect_EnumInRangeEx 选取特效做动作">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">选取特效做动作</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_EnumInRangeEx</span> <span class="kw">takes</span> <span class="type">real</span> <span class="param-name">x</span>, <span class="type">real</span> <span class="param-name">y</span>, <span class="type">real</span> <span class="param-name">range</span>, <span class="type">string</span> <span class="param-name">callback</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">x</span> <span class="p-desc">&mdash; 圆心x</span></li>
+      <li><span class="p-name">y</span> <span class="p-desc">&mdash; 圆心y</span></li>
+      <li><span class="p-name">range</span> <span class="p-desc">&mdash; 选取半径</span></li>
+      <li><span class="p-name">callback</span> <span class="p-desc">&mdash; 回调函数名</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_GetEnumEffect" data-search="MHEffect_GetEnumEffect 获取选取的特效">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">获取选取的特效</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">在选取特效做动作中, 指代被选取的特效<br></div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_GetEnumEffect</span> <span class="kw">takes</span> <span class="type">nothing</span> <span class="kw">returns</span> <span class="type">effect</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_ForceRender" data-search="MHEffect_ForceRender 强制渲染">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">强制渲染</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">可以强制渲染大模型特效, 即使特效中心不在屏幕内也能渲染<br>仅支持没有绑定到物体的特效<br></div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_ForceRender</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">boolean</span> <span class="param-name">is_force</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
+      <li><span class="p-name">is_force</span> <span class="p-desc">&mdash; 是否强制渲染</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_SwitchRender" data-search="MHEffect_SwitchRender 开关特效渲染">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">开关特效渲染</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">填false即可停止渲染所有非绑定的特效<br></div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SwitchRender</span> <span class="kw">takes</span> <span class="type">boolean</span> <span class="param-name">is_render</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">is_render</span> <span class="p-desc">&mdash; 是否渲染</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHEffect_SwitchExclude" data-search="MHEffect_SwitchExclude 除外特效渲染">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">除外特效渲染</div>
+    <div class="func-badges">
+      <span class="badge-lib">特效</span>
+    </div>
+    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">指 开关特效渲染 关闭后仍然渲染的特效<br></div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SwitchExclude</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">boolean</span> <span class="param-name">is_exclude</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 继续渲染的特效</span></li>
+      <li><span class="p-name">is_exclude</span> <span class="p-desc">&mdash; 是否渲染</span></li>
+    </ul>
+  </div>
+</div>
+
 <h3 id="cat-hashtable" style="color:var(--accent-cyan);margin:24px 0 12px 0;font-size:1.1em;">&#128194; 哈希表 (hashtable) - 47 个接口</h3>
 
 <div class="func-card" id="func-MHHashtable_EnumInteger" data-search="MHHashtable_EnumInteger 遍历哈希表 (整数)">
@@ -16543,955 +17711,6 @@ body {
   <div class="func-card-body">
     <div class="func-return-title">返回值</div>
     <div class="func-return-info"> <a class="p-ref" href="#enum-HASHTABLE_CHANGE">[参考 HASHTABLE_CHANGE]</a></div>
-  </div>
-</div>
-
-<h3 id="cat-effect" style="color:var(--accent-cyan);margin:24px 0 12px 0;font-size:1.1em;">&#128194; 特效 (effect) - 46 个接口</h3>
-
-<div class="func-card" id="func-MHEffect_GetX" data-search="MHEffect_GetX 获取X坐标">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">获取X坐标</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_GetX</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span> <span class="kw">returns</span> <span class="type">real</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_GetY" data-search="MHEffect_GetY 获取Y坐标">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">获取Y坐标</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_GetY</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span> <span class="kw">returns</span> <span class="type">real</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_GetZ" data-search="MHEffect_GetZ 获取Z坐标">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">获取Z坐标</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_GetZ</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span> <span class="kw">returns</span> <span class="type">real</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_SetX" data-search="MHEffect_SetX 设置X坐标">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置X坐标</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetX</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">real</span> <span class="param-name">value</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-      <li><span class="p-name">value</span> <span class="p-desc">&mdash; X坐标</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_SetY" data-search="MHEffect_SetY 设置Y坐标">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置Y坐标</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetY</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">real</span> <span class="param-name">value</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-      <li><span class="p-name">value</span> <span class="p-desc">&mdash; Y坐标</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_SetZ" data-search="MHEffect_SetZ 设置Z坐标">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置Z坐标</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetZ</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">real</span> <span class="param-name">value</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-      <li><span class="p-name">value</span> <span class="p-desc">&mdash; Z坐标</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_SetPosition" data-search="MHEffect_SetPosition 设置三轴坐标">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置三轴坐标</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetPosition</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">real</span> <span class="param-name">x</span>, <span class="type">real</span> <span class="param-name">y</span>, <span class="type">real</span> <span class="param-name">z</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-      <li><span class="p-name">x</span> <span class="p-desc">&mdash; 三轴坐标</span></li>
-      <li><span class="p-name">y</span> <span class="p-desc">&mdash; y</span></li>
-      <li><span class="p-name">z</span> <span class="p-desc">&mdash; z</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_SetRoll" data-search="MHEffect_SetRoll 设置绕X轴转角">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置绕X轴转角</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">多次调用会累加<br></div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetRoll</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">real</span> <span class="param-name">deg</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-      <li><span class="p-name">deg</span> <span class="p-desc">&mdash; 绕X轴转角</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_SetPitch" data-search="MHEffect_SetPitch 设置绕Y轴转角">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置绕Y轴转角</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">多次调用会累加<br></div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetPitch</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">real</span> <span class="param-name">deg</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-      <li><span class="p-name">deg</span> <span class="p-desc">&mdash; 绕Y轴转角</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_SetYaw" data-search="MHEffect_SetYaw 设置绕Z轴转角">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置绕Z轴转角</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">多次调用会累加<br></div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetYaw</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">real</span> <span class="param-name">deg</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-      <li><span class="p-name">deg</span> <span class="p-desc">&mdash; 绕Z轴转角</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_Rotate" data-search="MHEffect_Rotate 设置自转角">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置自转角</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">多次调用会累加. 右手螺旋定则<br></div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_Rotate</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">real</span> <span class="param-name">deg</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-      <li><span class="p-name">deg</span> <span class="p-desc">&mdash; 自转角</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_Rotation" data-search="MHEffect_Rotation 获取自转角">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">获取自转角</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_Rotation</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span> <span class="kw">returns</span> <span class="type">real</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_SetVector" data-search="MHEffect_SetVector 设置方向向量">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置方向向量</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">向量形式<br>(1, 0, 0)表示初始朝向 (正东)<br>不需要归一化<br></div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetVector</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">real</span> <span class="param-name">xv</span>, <span class="type">real</span> <span class="param-name">yv</span>, <span class="type">real</span> <span class="param-name">zv</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-      <li><span class="p-name">xv</span> <span class="p-desc">&mdash; 方向向量</span></li>
-      <li><span class="p-name">yv</span> <span class="p-desc">&mdash; yv</span></li>
-      <li><span class="p-name">zv</span> <span class="p-desc">&mdash; zv</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_GetVectorX" data-search="MHEffect_GetVectorX 获取方向向量X坐标">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">获取方向向量X坐标</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">向量形式. (1, 0, 0) 表示初始方向 (正东)<br>已归一化<br></div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_GetVectorX</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span> <span class="kw">returns</span> <span class="type">real</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_GetVectorY" data-search="MHEffect_GetVectorY 获取方向向量Y坐标">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">获取方向向量Y坐标</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">向量形式. (1, 0, 0) 表示初始方向 (正东)<br>已归一化<br></div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_GetVectorY</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span> <span class="kw">returns</span> <span class="type">real</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_GetVectorZ" data-search="MHEffect_GetVectorZ 获取方向向量Z坐标">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">获取方向向量Z坐标</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">向量形式. (1, 0, 0) 表示初始方向 (正东)<br>已归一化<br></div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_GetVectorZ</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span> <span class="kw">returns</span> <span class="type">real</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_Towards" data-search="MHEffect_Towards 设置朝向">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置朝向</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">直接让特效指向目标点<br></div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_Towards</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">real</span> <span class="param-name">target_x</span>, <span class="type">real</span> <span class="param-name">target_y</span>, <span class="type">real</span> <span class="param-name">target_z</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-      <li><span class="p-name">target_x</span> <span class="p-desc">&mdash; 目标点X坐标</span></li>
-      <li><span class="p-name">target_y</span> <span class="p-desc">&mdash; 目标点Y坐标</span></li>
-      <li><span class="p-name">target_z</span> <span class="p-desc">&mdash; 目标点Z坐标</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_SetMirror" data-search="MHEffect_SetMirror 镜像操作">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">镜像操作</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetMirror</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">integer</span> <span class="param-name">axis</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-      <li><span class="p-name">axis</span> <span class="p-desc">&mdash; 镜像轴</span> <a class="p-ref" href="#enum-MIRROR_AXIS">[参考 MIRROR_AXIS]</a></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_SetScale" data-search="MHEffect_SetScale 设置缩放">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置缩放</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetScale</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">real</span> <span class="param-name">scale</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-      <li><span class="p-name">scale</span> <span class="p-desc">&mdash; 缩放</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_SetScaleEx" data-search="MHEffect_SetScaleEx 设置三轴缩放">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置三轴缩放</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetScaleEx</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">real</span> <span class="param-name">x</span>, <span class="type">real</span> <span class="param-name">y</span>, <span class="type">real</span> <span class="param-name">z</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-      <li><span class="p-name">x</span> <span class="p-desc">&mdash; x轴缩放</span></li>
-      <li><span class="p-name">y</span> <span class="p-desc">&mdash; y轴缩放</span></li>
-      <li><span class="p-name">z</span> <span class="p-desc">&mdash; z轴缩放</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_SetParticleScale" data-search="MHEffect_SetParticleScale 设置粒子缩放">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置粒子缩放</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">多次设置会乘算叠加<br></div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetParticleScale</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">real</span> <span class="param-name">scale</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-      <li><span class="p-name">scale</span> <span class="p-desc">&mdash; 粒子缩放</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_ResetMatrix" data-search="MHEffect_ResetMatrix 重置变换">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">重置变换</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">方向和大小重置到初始状态<br></div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_ResetMatrix</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_SetModel" data-search="MHEffect_SetModel 设置模型">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置模型</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetModel</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">string</span> <span class="param-name">model_path</span>, <span class="type">boolean</span> <span class="param-name">flag</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-      <li><span class="p-name">model_path</span> <span class="p-desc">&mdash; 模型</span></li>
-      <li><span class="p-name">flag</span> <span class="p-desc">&mdash; 参数</span> <span class="p-desc">(作用未知)</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_SetTeamColor" data-search="MHEffect_SetTeamColor 设置队伍颜色">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置队伍颜色</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetTeamColor</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">playercolor</span> <span class="param-name">color</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-      <li><span class="p-name">color</span> <span class="p-desc">&mdash; 队伍颜色</span> <a class="p-ref" href="#enum-playercolor">[参考 playercolor]</a></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_SetTeamGlow" data-search="MHEffect_SetTeamGlow 设置队伍光晕">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置队伍光晕</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetTeamGlow</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">playercolor</span> <span class="param-name">glow</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-      <li><span class="p-name">glow</span> <span class="p-desc">&mdash; 队伍光晕</span> <a class="p-ref" href="#enum-playercolor">[参考 playercolor]</a></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_Hide" data-search="MHEffect_Hide 隐藏">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">隐藏</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_Hide</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">boolean</span> <span class="param-name">is_hide</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-      <li><span class="p-name">is_hide</span> <span class="p-desc">&mdash; 是否隐藏</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_IsHidden" data-search="MHEffect_IsHidden 被隐藏">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">被隐藏</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_IsHidden</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_SetAlpha" data-search="MHEffect_SetAlpha 设置透明度">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置透明度</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">取值范围0~255<br></div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetAlpha</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">integer</span> <span class="param-name">alpha</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-      <li><span class="p-name">alpha</span> <span class="p-desc">&mdash; 透明度</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_SetColor" data-search="MHEffect_SetColor 设置颜色">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置颜色</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetColor</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">integer</span> <span class="param-name">color</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-      <li><span class="p-name">color</span> <span class="p-desc">&mdash; 颜色</span> <span class="p-desc">(ARGB16进制颜色代码)</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_SetColorEx" data-search="MHEffect_SetColorEx 设置颜色 (ARGB)">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置颜色 (ARGB)</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">颜色值的取值范围与物编中相同<br></div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetColorEx</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">integer</span> <span class="param-name">alpha</span>, <span class="type">integer</span> <span class="param-name">red</span>, <span class="type">integer</span> <span class="param-name">green</span>, <span class="type">integer</span> <span class="param-name">blue</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-      <li><span class="p-name">alpha</span> <span class="p-desc">&mdash; 透明度</span></li>
-      <li><span class="p-name">red</span> <span class="p-desc">&mdash; 红色值</span></li>
-      <li><span class="p-name">green</span> <span class="p-desc">&mdash; 绿色值</span></li>
-      <li><span class="p-name">blue</span> <span class="p-desc">&mdash; 蓝色值</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_SetAnimation" data-search="MHEffect_SetAnimation 播放动画">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">播放动画</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetAnimation</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">integer</span> <span class="param-name">index</span>, <span class="type">integer</span> <span class="param-name">rarity</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-      <li><span class="p-name">index</span> <span class="p-desc">&mdash; 动画</span></li>
-      <li><span class="p-name">rarity</span> <span class="p-desc">&mdash; 概率</span> <span class="p-desc">(0: 普通概率, 1: 罕见概率)</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_SetAnimationByName" data-search="MHEffect_SetAnimationByName 播放动画 (按名字)">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">播放动画 (按名字)</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetAnimationByName</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">string</span> <span class="param-name">name</span>, <span class="type">string</span> <span class="param-name">attachment</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-      <li><span class="p-name">name</span> <span class="p-desc">&mdash; 动画</span></li>
-      <li><span class="p-name">attachment</span> <span class="p-desc">&mdash; 附加链接动画名</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_SetAnimationByType" data-search="MHEffect_SetAnimationByType 播放动画 (按类型)">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">播放动画 (按类型)</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetAnimationByType</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">integer</span> <span class="param-name">anim_type</span>, <span class="type">boolean</span> <span class="param-name">looping</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-      <li><span class="p-name">anim_type</span> <span class="p-desc">&mdash; 动画类型</span> <a class="p-ref" href="#enum-ANIM_TYPE">[参考 ANIM_TYPE]</a></li>
-      <li><span class="p-name">looping</span> <span class="p-desc">&mdash; 是否循环</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_GetAnimationProgress" data-search="MHEffect_GetAnimationProgress 获取动画进度">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">获取动画进度</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_GetAnimationProgress</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span> <span class="kw">returns</span> <span class="type">real</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-    </ul>
-    <div class="func-return-title">返回值</div>
-    <div class="func-return-info"><span class="r-desc">0~1</span></div>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_SetAnimationProgress" data-search="MHEffect_SetAnimationProgress 设置动画进度">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置动画进度</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">取值范围0~1<br></div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetAnimationProgress</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">real</span> <span class="param-name">progress</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-      <li><span class="p-name">progress</span> <span class="p-desc">&mdash; 动画进度</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_SetTimeScale" data-search="MHEffect_SetTimeScale 设置动画速度">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置动画速度</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">取值范围0~1<br></div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SetTimeScale</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">real</span> <span class="param-name">scale</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-      <li><span class="p-name">scale</span> <span class="p-desc">&mdash; 动画速度</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_BindToWidget" data-search="MHEffect_BindToWidget 绑定到单位">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">绑定到单位</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_BindToWidget</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">widget</span> <span class="param-name">target</span>, <span class="type">string</span> <span class="param-name">attach_name</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-      <li><span class="p-name">target</span> <span class="p-desc">&mdash; 目标单位/物品/可破坏物</span></li>
-      <li><span class="p-name">attach_name</span> <span class="p-desc">&mdash; 附加点</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_BindToEffect" data-search="MHEffect_BindToEffect 绑定到特效">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">绑定到特效</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_BindToEffect</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">effect</span> <span class="param-name">target</span>, <span class="type">string</span> <span class="param-name">attach_name</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-      <li><span class="p-name">target</span> <span class="p-desc">&mdash; 目标特效</span></li>
-      <li><span class="p-name">attach_name</span> <span class="p-desc">&mdash; 附加点</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_BindToFrame" data-search="MHEffect_BindToFrame 绑定到Frame">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">绑定到Frame</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">仅支持CSpriteFrame和CPortraitButton<br></div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_BindToFrame</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">integer</span> <span class="param-name">frame</span>, <span class="type">string</span> <span class="param-name">attach_name</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-      <li><span class="p-name">frame</span> <span class="p-desc">&mdash; 目标Frame</span></li>
-      <li><span class="p-name">attach_name</span> <span class="p-desc">&mdash; 附加点</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_Unbind" data-search="MHEffect_Unbind 从物体上解绑">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">从物体上解绑</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_Unbind</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 解绑</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_EnumInRange" data-search="MHEffect_EnumInRange 选取特效做动作">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">选取特效做动作</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_EnumInRange</span> <span class="kw">takes</span> <span class="type">real</span> <span class="param-name">x</span>, <span class="type">real</span> <span class="param-name">y</span>, <span class="type">real</span> <span class="param-name">range</span>, <span class="type">code</span> <span class="param-name">callback</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">x</span> <span class="p-desc">&mdash; 圆心x</span></li>
-      <li><span class="p-name">y</span> <span class="p-desc">&mdash; 圆心y</span></li>
-      <li><span class="p-name">range</span> <span class="p-desc">&mdash; 选取半径</span></li>
-      <li><span class="p-name">callback</span> <span class="p-desc">&mdash; 回调函数</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_EnumInRangeEx" data-search="MHEffect_EnumInRangeEx 选取特效做动作">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">选取特效做动作</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_EnumInRangeEx</span> <span class="kw">takes</span> <span class="type">real</span> <span class="param-name">x</span>, <span class="type">real</span> <span class="param-name">y</span>, <span class="type">real</span> <span class="param-name">range</span>, <span class="type">string</span> <span class="param-name">callback</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">x</span> <span class="p-desc">&mdash; 圆心x</span></li>
-      <li><span class="p-name">y</span> <span class="p-desc">&mdash; 圆心y</span></li>
-      <li><span class="p-name">range</span> <span class="p-desc">&mdash; 选取半径</span></li>
-      <li><span class="p-name">callback</span> <span class="p-desc">&mdash; 回调函数名</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_GetEnumEffect" data-search="MHEffect_GetEnumEffect 获取选取的特效">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">获取选取的特效</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">在选取特效做动作中, 指代被选取的特效<br></div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_GetEnumEffect</span> <span class="kw">takes</span> <span class="type">nothing</span> <span class="kw">returns</span> <span class="type">effect</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_ForceRender" data-search="MHEffect_ForceRender 强制渲染">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">强制渲染</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">可以强制渲染大模型特效, 即使特效中心不在屏幕内也能渲染<br>仅支持没有绑定到物体的特效<br></div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_ForceRender</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">boolean</span> <span class="param-name">is_force</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 特效</span></li>
-      <li><span class="p-name">is_force</span> <span class="p-desc">&mdash; 是否强制渲染</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_SwitchRender" data-search="MHEffect_SwitchRender 开关特效渲染">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">开关特效渲染</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">填false即可停止渲染所有非绑定的特效<br></div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SwitchRender</span> <span class="kw">takes</span> <span class="type">boolean</span> <span class="param-name">is_render</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">is_render</span> <span class="p-desc">&mdash; 是否渲染</span></li>
-    </ul>
-  </div>
-</div>
-
-<div class="func-card" id="func-MHEffect_SwitchExclude" data-search="MHEffect_SwitchExclude 除外特效渲染">
-  <div class="func-card-header">
-    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">除外特效渲染</div>
-    <div class="func-badges">
-      <span class="badge-lib">特效</span>
-    </div>
-    <div class="func-desc" style="margin-top:10px;margin-bottom:10px;">指 开关特效渲染 关闭后仍然渲染的特效<br></div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHEffect_SwitchExclude</span> <span class="kw">takes</span> <span class="type">effect</span> <span class="param-name">eff</span>, <span class="type">boolean</span> <span class="param-name">is_exclude</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
-  </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
-  <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">eff</span> <span class="p-desc">&mdash; 继续渲染的特效</span></li>
-      <li><span class="p-name">is_exclude</span> <span class="p-desc">&mdash; 是否渲染</span></li>
-    </ul>
   </div>
 </div>
 
@@ -28257,7 +28476,7 @@ body {
 </div>
 
 <div class="footer">
-  MemHack API Documentation &middot; Auto Generated at 2026-03-28 00:13:41 &middot; by Asphodelus
+  MemHack API Documentation &middot; Auto Generated at 2026-04-04 20:29:32 &middot; by Asphodelus
 </div>
 </div>
 </main>
