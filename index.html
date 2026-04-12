@@ -474,7 +474,7 @@ body {
 <nav class="sidebar">
   <div class="sidebar-header">
     <h1>&#128268; MemHack API</h1>
-    <div class="subtitle">JASS 接口文档 &middot; 2026-04-11</div>
+    <div class="subtitle">JASS 接口文档 &middot; 2026-04-12</div>
   </div>
   <div class="sidebar-search">
     <input type="text" id="searchInput" placeholder="&#128269; 搜索函数或常量..." oninput="filterItems(this.value)">
@@ -485,7 +485,7 @@ body {
       <div class="nav-section-title collapsed" onclick="toggleSection(this)"><span class="arrow">&#9660;</span>普通版接口</div>
       <div class="nav-items collapsed">
         <div class="nav-group">
-          <div class="nav-group-title collapsed" onclick="toggleGroup(this)" data-search="unit 单位"><span class="arrow">&#9660;</span>单位 (203)</div>
+          <div class="nav-group-title collapsed" onclick="toggleGroup(this)" data-search="unit 单位"><span class="arrow">&#9660;</span>单位 (204)</div>
           <div class="nav-items collapsed">
             <a class="nav-item" href="#func-MHUnit_EnumInRange" data-search="MHUnit_EnumInRange 选取范围内的单位做动作">选取范围内的单位做动作</a>
             <a class="nav-item" href="#func-MHUnit_EnumInRangeEx" data-search="MHUnit_EnumInRangeEx 选取圆形范围内的单位做动作">选取圆形范围内的单位做动作</a>
@@ -578,6 +578,7 @@ body {
             <a class="nav-item" href="#func-MHUnit_GetState" data-search="MHUnit_GetState 获取单位当前状态">获取单位当前状态</a>
             <a class="nav-item" href="#func-MHUnit_IsState" data-search="MHUnit_IsState 判定状态">判定状态</a>
             <a class="nav-item" href="#func-MHUnit_DisableMove" data-search="MHUnit_DisableMove 禁止单位移动">禁止单位移动</a>
+            <a class="nav-item" href="#func-MHUnit_IsMoving" data-search="MHUnit_IsMoving 单位正在移动">单位正在移动</a>
             <a class="nav-item" href="#func-MHUnit_GetMoveType" data-search="MHUnit_GetMoveType 获取移动类型">获取移动类型</a>
             <a class="nav-item" href="#func-MHUnit_SetMoveType" data-search="MHUnit_SetMoveType 设置移动类型">设置移动类型</a>
             <a class="nav-item" href="#func-MHUnit_SetPathType" data-search="MHUnit_SetPathType 设置寻路类型">设置寻路类型</a>
@@ -2054,7 +2055,7 @@ body {
 <div class="section" id="section-funcs">
 <h2 class="section-title"><span class="icon">&#9889;</span> 函数接口</h2>
 
-<h3 id="cat-unit" style="color:var(--accent-cyan);margin:24px 0 12px 0;font-size:1.1em;">&#128194; 单位 (unit) - 203 个接口</h3>
+<h3 id="cat-unit" style="color:var(--accent-cyan);margin:24px 0 12px 0;font-size:1.1em;">&#128194; 单位 (unit) - 204 个接口</h3>
 
 <div class="func-card" id="func-MHUnit_EnumInRange" data-search="MHUnit_EnumInRange 选取范围内的单位做动作">
   <div class="func-card-header">
@@ -3911,6 +3912,25 @@ body {
     <ul class="func-params-list">
       <li><span class="p-name">u</span> <span class="p-desc">&mdash; 单位</span></li>
       <li><span class="p-name">is_disable</span> <span class="p-desc">&mdash; 是否禁用</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHUnit_IsMoving" data-search="MHUnit_IsMoving 单位正在移动">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">单位正在移动</div>
+    <div class="func-badges">
+      <span class="badge-lib">单位</span>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
+    <div class="func-params-title">JASS函数定义</div>
+    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHUnit_IsMoving</span> <span class="kw">takes</span> <span class="type">unit</span> <span class="param-name">u</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
+  </div>
+  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
+  <div class="func-card-body">
+    <div class="func-params-title">参数</div>
+    <ul class="func-params-list">
+      <li><span class="p-name">u</span> <span class="p-desc">&mdash; 单位</span></li>
     </ul>
   </div>
 </div>
@@ -28450,7 +28470,7 @@ body {
 <div class="enum-group" id="enum-UNIT_DATA" data-search="UNIT_DATA">
   <div class="enum-group-header" onclick="this.nextElementSibling.classList.toggle('hidden')">
     <span class="enum-group-name">单位数据 (UNIT_DATA)</span>
-    <span class="enum-group-count">22 项</span>
+    <span class="enum-group-count">21 项</span>
   </div>
   <table class="enum-table">
     <thead><tr><th>名称</th><th>值</th><th>说明</th></tr></thead>
@@ -28469,14 +28489,13 @@ body {
       <tr id="enum-UNIT_DATA-UNIT_DATA_LAUNCH_Z" data-search="UNIT_DATA_LAUNCH_Z"><td class="enum-name">UNIT_DATA_LAUNCH_Z</td><td class="enum-value">0xC</td><td class="enum-doc">射弹偏移 - Z</td></tr>
       <tr id="enum-UNIT_DATA-UNIT_DATA_LAUNCH_Z_SWIM" data-search="UNIT_DATA_LAUNCH_Z_SWIM"><td class="enum-name">UNIT_DATA_LAUNCH_Z_SWIM</td><td class="enum-value">0xD</td><td class="enum-doc">射弹偏移 - Z (深水)</td></tr>
       <tr id="enum-UNIT_DATA-UNIT_DATA_MODEL_SCALE" data-search="UNIT_DATA_MODEL_SCALE"><td class="enum-name">UNIT_DATA_MODEL_SCALE</td><td class="enum-value">0xE</td><td class="enum-doc">模型缩放</td></tr>
-      <tr id="enum-UNIT_DATA-UNIT_DATA_Z_SCALE" data-search="UNIT_DATA_Z_SCALE"><td class="enum-name">UNIT_DATA_Z_SCALE</td><td class="enum-value">0xF</td><td class="enum-doc">Z轴缩放<br>可以设置, 但是当单位有了新的动作后就会恢复</td></tr>
-      <tr id="enum-UNIT_DATA-UNIT_DATA_HPBAR_HEIGHT" data-search="UNIT_DATA_HPBAR_HEIGHT"><td class="enum-name">UNIT_DATA_HPBAR_HEIGHT</td><td class="enum-value">0x10</td><td class="enum-doc">血条高度</td></tr>
-      <tr id="enum-UNIT_DATA-UNIT_DATA_TIME_SCALE" data-search="UNIT_DATA_TIME_SCALE"><td class="enum-name">UNIT_DATA_TIME_SCALE</td><td class="enum-value">0x11</td><td class="enum-doc">动画播放速度</td></tr>
-      <tr id="enum-UNIT_DATA-UNIT_DATA_COLLISION" data-search="UNIT_DATA_COLLISION"><td class="enum-name">UNIT_DATA_COLLISION</td><td class="enum-value">0x12</td><td class="enum-doc">碰撞大小</td></tr>
-      <tr id="enum-UNIT_DATA-UNIT_DATA_BASE_MOVESPEED" data-search="UNIT_DATA_BASE_MOVESPEED"><td class="enum-name">UNIT_DATA_BASE_MOVESPEED</td><td class="enum-value">0x13</td><td class="enum-doc">基础移速</td></tr>
-      <tr id="enum-UNIT_DATA-UNIT_DATA_BONUS_MOVESPEED" data-search="UNIT_DATA_BONUS_MOVESPEED"><td class="enum-name">UNIT_DATA_BONUS_MOVESPEED</td><td class="enum-value">0x14</td><td class="enum-doc">附加移速</td></tr>
-      <tr id="enum-UNIT_DATA-UNIT_DATA_MAGIC_RESIST" data-search="UNIT_DATA_MAGIC_RESIST"><td class="enum-name">UNIT_DATA_MAGIC_RESIST</td><td class="enum-value">0x15</td><td class="enum-doc">魔法抗性<br>不包括护甲类型, 不可修改, 返回伤害乘数</td></tr>
-      <tr id="enum-UNIT_DATA-UNIT_DATA_DODGE_PROBABILITY" data-search="UNIT_DATA_DODGE_PROBABILITY"><td class="enum-name">UNIT_DATA_DODGE_PROBABILITY</td><td class="enum-value">0x16</td><td class="enum-doc">闪避率<br>不可修改, 实际上是取最大值</td></tr>
+      <tr id="enum-UNIT_DATA-UNIT_DATA_HPBAR_HEIGHT" data-search="UNIT_DATA_HPBAR_HEIGHT"><td class="enum-name">UNIT_DATA_HPBAR_HEIGHT</td><td class="enum-value">0xF</td><td class="enum-doc">血条高度</td></tr>
+      <tr id="enum-UNIT_DATA-UNIT_DATA_TIME_SCALE" data-search="UNIT_DATA_TIME_SCALE"><td class="enum-name">UNIT_DATA_TIME_SCALE</td><td class="enum-value">0x10</td><td class="enum-doc">动画播放速度</td></tr>
+      <tr id="enum-UNIT_DATA-UNIT_DATA_COLLISION" data-search="UNIT_DATA_COLLISION"><td class="enum-name">UNIT_DATA_COLLISION</td><td class="enum-value">0x11</td><td class="enum-doc">碰撞大小</td></tr>
+      <tr id="enum-UNIT_DATA-UNIT_DATA_BASE_MOVESPEED" data-search="UNIT_DATA_BASE_MOVESPEED"><td class="enum-name">UNIT_DATA_BASE_MOVESPEED</td><td class="enum-value">0x12</td><td class="enum-doc">基础移速</td></tr>
+      <tr id="enum-UNIT_DATA-UNIT_DATA_BONUS_MOVESPEED" data-search="UNIT_DATA_BONUS_MOVESPEED"><td class="enum-name">UNIT_DATA_BONUS_MOVESPEED</td><td class="enum-value">0x13</td><td class="enum-doc">附加移速</td></tr>
+      <tr id="enum-UNIT_DATA-UNIT_DATA_MAGIC_RESIST" data-search="UNIT_DATA_MAGIC_RESIST"><td class="enum-name">UNIT_DATA_MAGIC_RESIST</td><td class="enum-value">0x14</td><td class="enum-doc">魔法抗性<br>不包括护甲类型, 不可修改, 返回伤害乘数</td></tr>
+      <tr id="enum-UNIT_DATA-UNIT_DATA_DODGE_PROBABILITY" data-search="UNIT_DATA_DODGE_PROBABILITY"><td class="enum-name">UNIT_DATA_DODGE_PROBABILITY</td><td class="enum-value">0x15</td><td class="enum-doc">闪避率<br>不可修改, 实际上是取最大值</td></tr>
     </tbody>
   </table>
 </div>
@@ -28826,7 +28845,7 @@ body {
 </div>
 
 <div class="footer">
-  MemHack API Documentation &middot; Auto Generated at 2026-04-11 17:12:52 &middot; by Asphodelus
+  MemHack API Documentation &middot; Auto Generated at 2026-04-12 14:09:23 &middot; by Asphodelus
 </div>
 </div>
 </main>
