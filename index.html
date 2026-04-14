@@ -474,7 +474,7 @@ body {
 <nav class="sidebar">
   <div class="sidebar-header">
     <h1>&#128268; MemHack API</h1>
-    <div class="subtitle">JASS 接口文档 &middot; 2026-04-12</div>
+    <div class="subtitle">JASS 接口文档 &middot; 2026-04-14</div>
   </div>
   <div class="sidebar-search">
     <input type="text" id="searchInput" placeholder="&#128269; 搜索函数或常量..." oninput="filterItems(this.value)">
@@ -485,7 +485,7 @@ body {
       <div class="nav-section-title collapsed" onclick="toggleSection(this)"><span class="arrow">&#9660;</span>普通版接口</div>
       <div class="nav-items collapsed">
         <div class="nav-group">
-          <div class="nav-group-title collapsed" onclick="toggleGroup(this)" data-search="unit 单位"><span class="arrow">&#9660;</span>单位 (204)</div>
+          <div class="nav-group-title collapsed" onclick="toggleGroup(this)" data-search="unit 单位"><span class="arrow">&#9660;</span>单位 (203)</div>
           <div class="nav-items collapsed">
             <a class="nav-item" href="#func-MHUnit_EnumInRange" data-search="MHUnit_EnumInRange 选取范围内的单位做动作">选取范围内的单位做动作</a>
             <a class="nav-item" href="#func-MHUnit_EnumInRangeEx" data-search="MHUnit_EnumInRangeEx 选取圆形范围内的单位做动作">选取圆形范围内的单位做动作</a>
@@ -578,7 +578,6 @@ body {
             <a class="nav-item" href="#func-MHUnit_GetState" data-search="MHUnit_GetState 获取单位当前状态">获取单位当前状态</a>
             <a class="nav-item" href="#func-MHUnit_IsState" data-search="MHUnit_IsState 判定状态">判定状态</a>
             <a class="nav-item" href="#func-MHUnit_DisableMove" data-search="MHUnit_DisableMove 禁止单位移动">禁止单位移动</a>
-            <a class="nav-item" href="#func-MHUnit_IsMoving" data-search="MHUnit_IsMoving 单位正在移动">单位正在移动</a>
             <a class="nav-item" href="#func-MHUnit_GetMoveType" data-search="MHUnit_GetMoveType 获取移动类型">获取移动类型</a>
             <a class="nav-item" href="#func-MHUnit_SetMoveType" data-search="MHUnit_SetMoveType 设置移动类型">设置移动类型</a>
             <a class="nav-item" href="#func-MHUnit_SetPathType" data-search="MHUnit_SetPathType 设置寻路类型">设置寻路类型</a>
@@ -1828,6 +1827,14 @@ body {
       <div class="nav-section-title collapsed" onclick="toggleSection(this)"><span class="arrow">&#9660;</span>付费版接口</div>
       <div class="nav-items collapsed">
         <div class="nav-group">
+          <div class="nav-group-title collapsed" onclick="toggleGroup(this)" data-search="unit 单位"><span class="arrow">&#9660;</span>单位 (3)</div>
+          <div class="nav-items collapsed">
+            <a class="nav-item" href="#func-MHUnit_IsMoving" data-search="MHUnit_IsMoving 单位正在移动">单位正在移动</a>
+            <a class="nav-item" href="#func-MHUnit_GetNextWayPointX" data-search="MHUnit_GetNextWayPointX 获取下一个路径点X坐标">获取下一个路径点X坐标</a>
+            <a class="nav-item" href="#func-MHUnit_GetNextWayPointY" data-search="MHUnit_GetNextWayPointY 获取下一个路径点Y坐标">获取下一个路径点Y坐标</a>
+          </div>
+        </div>
+        <div class="nav-group">
           <div class="nav-group-title collapsed" onclick="toggleGroup(this)" data-search="message message"><span class="arrow">&#9660;</span>message (2)</div>
           <div class="nav-items collapsed">
             <a class="nav-item" href="#func-MHMsg_PixelToScreenX" data-search="MHMsg_PixelToScreenX 像素坐标转屏幕坐标X">像素坐标转屏幕坐标X</a>
@@ -2055,7 +2062,7 @@ body {
 <div class="section" id="section-funcs">
 <h2 class="section-title"><span class="icon">&#9889;</span> 函数接口</h2>
 
-<h3 id="cat-unit" style="color:var(--accent-cyan);margin:24px 0 12px 0;font-size:1.1em;">&#128194; 单位 (unit) - 204 个接口</h3>
+<h3 id="cat-unit" style="color:var(--accent-cyan);margin:24px 0 12px 0;font-size:1.1em;">&#128194; 单位 (unit) - 206 个接口</h3>
 
 <div class="func-card" id="func-MHUnit_EnumInRange" data-search="MHUnit_EnumInRange 选取范围内的单位做动作">
   <div class="func-card-header">
@@ -3921,17 +3928,39 @@ body {
     <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">单位正在移动</div>
     <div class="func-badges">
       <span class="badge-lib">单位</span>
+      <span class="badge-premium" title="该函数/常量为付费版功能">Premium</span>
     </div>
-    <hr style="border:none;border-top:1px solid var(--border-color);margin:12px 0;">
-    <div class="func-params-title">JASS函数定义</div>
-    <div class="func-signature"><span class="kw">function</span> <span class="fn-name">MHUnit_IsMoving</span> <span class="kw">takes</span> <span class="type">unit</span> <span class="param-name">u</span> <span class="kw">returns</span> <span class="type">boolean</span></div>
   </div>
-  <hr style="border:none;border-top:1px solid var(--border-color);margin:0 20px;">
   <div class="func-card-body">
-    <div class="func-params-title">参数</div>
-    <ul class="func-params-list">
-      <li><span class="p-name">u</span> <span class="p-desc">&mdash; 单位</span></li>
-    </ul>
+    <div class="premium-contact">详情咨询qq1748562809</div>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHUnit_GetNextWayPointX" data-search="MHUnit_GetNextWayPointX 获取下一个路径点X坐标">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">获取下一个路径点X坐标</div>
+    <div class="func-badges">
+      <span class="badge-lib">单位</span>
+      <span class="badge-premium" title="该函数/常量为付费版功能">Premium</span>
+    </div>
+  </div>
+  <div class="func-card-body">
+    <div class="func-desc">单位正在移动时才会有路径点<br></div>
+    <div class="premium-contact">详情咨询qq1748562809</div>
+  </div>
+</div>
+
+<div class="func-card" id="func-MHUnit_GetNextWayPointY" data-search="MHUnit_GetNextWayPointY 获取下一个路径点Y坐标">
+  <div class="func-card-header">
+    <div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">获取下一个路径点Y坐标</div>
+    <div class="func-badges">
+      <span class="badge-lib">单位</span>
+      <span class="badge-premium" title="该函数/常量为付费版功能">Premium</span>
+    </div>
+  </div>
+  <div class="func-card-body">
+    <div class="func-desc">单位正在移动时才会有路径点<br></div>
+    <div class="premium-contact">详情咨询qq1748562809</div>
   </div>
 </div>
 
@@ -28845,7 +28874,7 @@ body {
 </div>
 
 <div class="footer">
-  MemHack API Documentation &middot; Auto Generated at 2026-04-12 14:09:23 &middot; by Asphodelus
+  MemHack API Documentation &middot; Auto Generated at 2026-04-14 19:22:50 &middot; by Asphodelus
 </div>
 </div>
 </main>
