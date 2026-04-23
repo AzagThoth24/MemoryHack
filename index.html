@@ -499,7 +499,7 @@ body {
 <nav class="sidebar">
   <div class="sidebar-header">
     <h1>&#128268; MemHack API</h1>
-    <div class="subtitle">JASS 接口文档 &middot; 2026-04-19</div>
+    <div class="subtitle">JASS 接口文档 &middot; 2026-04-24</div>
   </div>
   <div class="sidebar-search">
     <input type="text" id="searchInput" placeholder="&#128269; 搜索函数或常量..." oninput="filterItems(this.value)">
@@ -1852,12 +1852,13 @@ body {
 		    <div class="nav-section-title collapsed" onclick="toggleSection(this)"><span class="arrow">&#9660;</span>付费版接口</div>
 		    <div class="nav-items collapsed">
         <div class="nav-group" data-group-search="unit 单位">
-		        <div class="nav-group-title collapsed" onclick="toggleGroup(this)"><span class="arrow">&#9660;</span>单位 (4)</div>
+		        <div class="nav-group-title collapsed" onclick="toggleGroup(this)"><span class="arrow">&#9660;</span>单位 (5)</div>
 		        <div class="nav-items collapsed">
             <a class="nav-item" onclick="showPage('func-MHUnit_IsMoving')" data-search="MHUnit_IsMoving 单位正在移动">单位正在移动</a>
             <a class="nav-item" onclick="showPage('func-MHUnit_GetNextWayPointX')" data-search="MHUnit_GetNextWayPointX 获取下一个路径点X坐标">获取下一个路径点X坐标</a>
             <a class="nav-item" onclick="showPage('func-MHUnit_GetNextWayPointY')" data-search="MHUnit_GetNextWayPointY 获取下一个路径点Y坐标">获取下一个路径点Y坐标</a>
             <a class="nav-item" onclick="showPage('func-MHUnit_SetScale')" data-search="MHUnit_SetScale 设置三轴缩放">设置三轴缩放</a>
+            <a class="nav-item" onclick="showPage('func-MHUnit_UnlockPathingThrottle')" data-search="MHUnit_UnlockPathingThrottle 解除寻路限制">解除寻路限制</a>
           </div>
         </div>
         <div class="nav-group" data-group-search="ability 技能">
@@ -1871,6 +1872,15 @@ body {
             <a class="nav-item" onclick="showPage('func-MHAbilityPassiveEvent_GetResult')" data-search="MHAbilityPassiveEvent_GetResult 获取被动技能的结果">获取被动技能的结果</a>
             <a class="nav-item" onclick="showPage('func-MHAbilityPassiveEvent_SetResult')" data-search="MHAbilityPassiveEvent_SetResult 设置被动技能的结果">设置被动技能的结果</a>
             <a class="nav-item" onclick="showPage('func-MHAbilityPassiveEvent_GetStage')" data-search="MHAbilityPassiveEvent_GetStage 获取被动技能的触发阶段">获取被动技能的触发阶段</a>
+          </div>
+        </div>
+        <div class="nav-group" data-group-search="frame frame">
+		        <div class="nav-group-title collapsed" onclick="toggleGroup(this)"><span class="arrow">&#9660;</span>frame (4)</div>
+		        <div class="nav-items collapsed">
+            <a class="nav-item" onclick="showPage('func-MHFrame_SetOutline')" data-search="MHFrame_SetOutline 设置文本描边">设置文本描边</a>
+            <a class="nav-item" onclick="showPage('func-MHFrame_ResetOutline')" data-search="MHFrame_ResetOutline 重置文本描边">重置文本描边</a>
+            <a class="nav-item" onclick="showPage('func-MHFrame_SetGradient')" data-search="MHFrame_SetGradient 设置渐变文本">设置渐变文本</a>
+            <a class="nav-item" onclick="showPage('func-MHFrame_ResetGradient')" data-search="MHFrame_ResetGradient 重置渐变文本">重置渐变文本</a>
           </div>
         </div>
         <div class="nav-group" data-group-search="message message">
@@ -2108,6 +2118,24 @@ body {
 支持加密文件夹为asi模型包">模型加密</a>
       </div>
     </div>
+
+		  <div class="nav-section">
+		    <div class="nav-section-title collapsed" onclick="toggleSection(this)"><span class="arrow">&#9660;</span>更新日志</div>
+		    <div class="nav-items collapsed">
+		      <a class="nav-item-const" onclick="showPage('changelog-1.0.7.716')" data-search="更新日志 changelog 1.0.7.716">1.0.7.716 [NEW]</a>
+		      <a class="nav-item-const" onclick="showPage('changelog-1.0.7.655')" data-search="更新日志 changelog 1.0.7.655">1.0.7.655</a>
+		      <a class="nav-item-const" onclick="showPage('changelog-1.0.7.649')" data-search="更新日志 changelog 1.0.7.649">1.0.7.649</a>
+		      <a class="nav-item-const" onclick="showPage('changelog-1.0.6.598')" data-search="更新日志 changelog 1.0.6.598">1.0.6.598</a>
+		      <a class="nav-item-const" onclick="showPage('changelog-1.0.5.554')" data-search="更新日志 changelog 1.0.5.554">1.0.5.554</a>
+		      <a class="nav-item-const" onclick="showPage('changelog-1.0.4.537')" data-search="更新日志 changelog 1.0.4.537">1.0.4.537</a>
+		      <a class="nav-item-const" onclick="showPage('changelog-1.0.3.526')" data-search="更新日志 changelog 1.0.3.526">1.0.3.526</a>
+		      <a class="nav-item-const" onclick="showPage('changelog-1.0.1.310')" data-search="更新日志 changelog 1.0.1.310">1.0.1.310</a>
+		      <a class="nav-item-const" onclick="showPage('changelog-1.0.1.257')" data-search="更新日志 changelog 1.0.1.257">1.0.1.257</a>
+		      <a class="nav-item-const" onclick="showPage('changelog-1.0.1.119')" data-search="更新日志 changelog 1.0.1.119">1.0.1.119</a>
+		      <a class="nav-item-const" onclick="showPage('changelog-1.0.0.91')" data-search="更新日志 changelog 1.0.0.91">1.0.0.91</a>
+		      <a class="nav-item-const" onclick="showPage('changelog-1.0.0.79')" data-search="更新日志 changelog 1.0.0.79">1.0.0.79</a>
+		    </div>
+		  </div>
   </div>
 </nav>
 <main class="main">
@@ -5345,6 +5373,22 @@ body {
     <ul class="func-params-list">
       <li><span class="p-name">u</span> <span class="p-desc">&mdash; 单位</span></li>
     </ul>
+  </div>
+</div>
+</div>
+<div class="page" id="page-func-MHUnit_UnlockPathingThrottle" data-search="MHUnit_UnlockPathingThrottle 解除寻路限制">
+
+<div class="func-card" id="func-MHUnit_UnlockPathingThrottle">
+		<div class="func-card-header">
+				<div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">解除寻路限制</div>
+				<div class="func-badges">
+				  <span class="badge-lib">单位</span>
+				  <span class="badge-premium" title="该函数/常量为付费版功能">Premium</span>
+				</div>
+		</div>
+		<div class="func-card-body">
+    <div class="func-desc">该操作不可逆<br></div>
+    <div class="premium-contact">详情咨询qq1748562809</div>
   </div>
 </div>
 </div>
@@ -13285,6 +13329,70 @@ body {
     <ul class="func-params-list">
       <li><span class="p-name">is_limit</span> <span class="p-desc">&mdash; 是否限制在屏幕内</span></li>
     </ul>
+  </div>
+</div>
+</div>
+<div class="page" id="page-func-MHFrame_SetOutline" data-search="MHFrame_SetOutline 设置文本描边">
+
+<div class="func-card" id="func-MHFrame_SetOutline">
+		<div class="func-card-header">
+				<div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置文本描边</div>
+				<div class="func-badges">
+				  <span class="badge-lib">frame</span>
+				  <span class="badge-premium" title="该函数/常量为付费版功能">Premium</span>
+				</div>
+		</div>
+		<div class="func-card-body">
+    <div class="func-desc">仅支持CTextFrame<br></div>
+    <div class="premium-contact">详情咨询qq1748562809</div>
+  </div>
+</div>
+</div>
+<div class="page" id="page-func-MHFrame_ResetOutline" data-search="MHFrame_ResetOutline 重置文本描边">
+
+<div class="func-card" id="func-MHFrame_ResetOutline">
+		<div class="func-card-header">
+				<div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">重置文本描边</div>
+				<div class="func-badges">
+				  <span class="badge-lib">frame</span>
+				  <span class="badge-premium" title="该函数/常量为付费版功能">Premium</span>
+				</div>
+		</div>
+		<div class="func-card-body">
+    <div class="func-desc">仅支持CTextFrame<br></div>
+    <div class="premium-contact">详情咨询qq1748562809</div>
+  </div>
+</div>
+</div>
+<div class="page" id="page-func-MHFrame_SetGradient" data-search="MHFrame_SetGradient 设置渐变文本">
+
+<div class="func-card" id="func-MHFrame_SetGradient">
+		<div class="func-card-header">
+				<div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">设置渐变文本</div>
+				<div class="func-badges">
+				  <span class="badge-lib">frame</span>
+				  <span class="badge-premium" title="该函数/常量为付费版功能">Premium</span>
+				</div>
+		</div>
+		<div class="func-card-body">
+    <div class="func-desc">仅支持CTextFrame<br></div>
+    <div class="premium-contact">详情咨询qq1748562809</div>
+  </div>
+</div>
+</div>
+<div class="page" id="page-func-MHFrame_ResetGradient" data-search="MHFrame_ResetGradient 重置渐变文本">
+
+<div class="func-card" id="func-MHFrame_ResetGradient">
+		<div class="func-card-header">
+				<div style="font-size:1.15em;font-weight:700;color:var(--accent-green);margin-bottom:8px;">重置渐变文本</div>
+				<div class="func-badges">
+				  <span class="badge-lib">frame</span>
+				  <span class="badge-premium" title="该函数/常量为付费版功能">Premium</span>
+				</div>
+		</div>
+		<div class="func-card-body">
+    <div class="func-desc">仅支持CTextFrame<br></div>
+    <div class="premium-contact">详情咨询qq1748562809</div>
   </div>
 </div>
 </div>
@@ -31860,9 +31968,213 @@ body {
 		</div>
 </div>
 </div>
+<div class="page" id="page-changelog-1.0.7.716" data-search="更新日志 changelog 1.0.7.716">
+
+<div class="enum-group" id="changelog-1.0.7.716">
+		<div class="enum-group-header">
+		  <span class="enum-group-name">1.0.7.716 [NEW]</span>
+		  <span class="enum-group-count">新增 3 项</span>
+		</div>
+		<table class="enum-table">
+		  <thead><tr><th style="width:60px">#</th><th>内容</th></tr></thead>
+		  <tbody>
+    <tr><td class="enum-val">1</td><td class="enum-name">新增解除单位寻路限制的接口</td></tr>
+    <tr><td class="enum-val">2</td><td class="enum-name">新增设置文本描边的接口</td></tr>
+    <tr><td class="enum-val">3</td><td class="enum-name">新增设置文本彩色字的接口</td></tr>
+  </tbody>
+</table>
+</div>
+</div>
+<div class="page" id="page-changelog-1.0.7.655" data-search="更新日志 changelog 1.0.7.655">
+
+<div class="enum-group" id="changelog-1.0.7.655">
+		<div class="enum-group-header">
+		  <span class="enum-group-name">1.0.7.655</span>
+		  <span class="enum-group-count">新增 1 项</span>
+		</div>
+		<table class="enum-table">
+		  <thead><tr><th style="width:60px">#</th><th>内容</th></tr></thead>
+		  <tbody>
+    <tr><td class="enum-val">1</td><td class="enum-name">lua引擎支持luac文件 (lua5.4)</td></tr>
+  </tbody>
+</table>
+</div>
+</div>
+<div class="page" id="page-changelog-1.0.7.649" data-search="更新日志 changelog 1.0.7.649">
+
+<div class="enum-group" id="changelog-1.0.7.649">
+		<div class="enum-group-header">
+		  <span class="enum-group-name">1.0.7.649</span>
+		  <span class="enum-group-count">新增 6 项</span>
+		</div>
+		<table class="enum-table">
+		  <thead><tr><th style="width:60px">#</th><th>内容</th></tr></thead>
+		  <tbody>
+    <tr><td class="enum-val">1</td><td class="enum-name">新增设置单位三轴缩放的接口</td></tr>
+    <tr><td class="enum-val">2</td><td class="enum-name">触发器中新增转换伤害标志为整数的封装</td></tr>
+    <tr><td class="enum-val">3</td><td class="enum-name">新增转换整数为单位/物品/玩家/特效/计时器/触发器的接口</td></tr>
+    <tr><td class="enum-val">4</td><td class="enum-name">新增任意被动技能触发事件以及相关接口</td></tr>
+    <tr><td class="enum-val">5</td><td class="enum-name">新增读写buff提供者的接口</td></tr>
+    <tr><td class="enum-val">6</td><td class="enum-name">增加一些技能标志的枚举</td></tr>
+  </tbody>
+</table>
+</div>
+</div>
+<div class="page" id="page-changelog-1.0.6.598" data-search="更新日志 changelog 1.0.6.598">
+
+<div class="enum-group" id="changelog-1.0.6.598">
+		<div class="enum-group-header">
+		  <span class="enum-group-name">1.0.6.598</span>
+		  <span class="enum-group-count">新增 2 项</span>
+		</div>
+		<table class="enum-table">
+		  <thead><tr><th style="width:60px">#</th><th>内容</th></tr></thead>
+		  <tbody>
+    <tr><td class="enum-val">1</td><td class="enum-name">新增获取单位下一个路径点坐标的接口</td></tr>
+    <tr><td class="enum-val">2</td><td class="enum-name">lua引擎异常处理中增加比较详细的调用栈跟踪</td></tr>
+  </tbody>
+</table>
+</div>
+</div>
+<div class="page" id="page-changelog-1.0.5.554" data-search="更新日志 changelog 1.0.5.554">
+
+<div class="enum-group" id="changelog-1.0.5.554">
+		<div class="enum-group-header">
+		  <span class="enum-group-name">1.0.5.554</span>
+		  <span class="enum-group-count">新增 1 项</span>
+		</div>
+		<table class="enum-table">
+		  <thead><tr><th style="width:60px">#</th><th>内容</th></tr></thead>
+		  <tbody>
+    <tr><td class="enum-val">1</td><td class="enum-name">新增判定单位移动的接口</td></tr>
+  </tbody>
+</table>
+</div>
+</div>
+<div class="page" id="page-changelog-1.0.4.537" data-search="更新日志 changelog 1.0.4.537">
+
+<div class="enum-group" id="changelog-1.0.4.537">
+		<div class="enum-group-header">
+		  <span class="enum-group-name">1.0.4.537</span>
+		  <span class="enum-group-count">新增 3 项</span>
+		</div>
+		<table class="enum-table">
+		  <thead><tr><th style="width:60px">#</th><th>内容</th></tr></thead>
+		  <tbody>
+    <tr><td class="enum-val">1</td><td class="enum-name">读写单位数据的接口中增加对单位基础移速的枚举</td></tr>
+    <tr><td class="enum-val">2</td><td class="enum-name">新增获取模块回调函数的接口</td></tr>
+    <tr><td class="enum-val">3</td><td class="enum-name">lua导出文档中增加对其他lua引擎的注解</td></tr>
+  </tbody>
+</table>
+</div>
+</div>
+<div class="page" id="page-changelog-1.0.3.526" data-search="更新日志 changelog 1.0.3.526">
+
+<div class="enum-group" id="changelog-1.0.3.526">
+		<div class="enum-group-header">
+		  <span class="enum-group-name">1.0.3.526</span>
+		  <span class="enum-group-count">新增 6 项</span>
+		</div>
+		<table class="enum-table">
+		  <thead><tr><th style="width:60px">#</th><th>内容</th></tr></thead>
+		  <tbody>
+    <tr><td class="enum-val">1</td><td class="enum-name">新增获取单位/特效当前动画名/序号的接口</td></tr>
+    <tr><td class="enum-val">2</td><td class="enum-name">新增播放单位/特效动画的接口(包括进度设置和是否循环)</td></tr>
+    <tr><td class="enum-val">3</td><td class="enum-name">新增获取单位/特效动画数量的接口</td></tr>
+    <tr><td class="enum-val">4</td><td class="enum-name">新增像素坐标转屏幕坐标的接口</td></tr>
+    <tr><td class="enum-val">5</td><td class="enum-name">新增模块相关的接口</td></tr>
+    <tr><td class="enum-val">6</td><td class="enum-name">触发器中新增编译期字符串哈希的动作</td></tr>
+  </tbody>
+</table>
+</div>
+</div>
+<div class="page" id="page-changelog-1.0.1.310" data-search="更新日志 changelog 1.0.1.310">
+
+<div class="enum-group" id="changelog-1.0.1.310">
+		<div class="enum-group-header">
+		  <span class="enum-group-name">1.0.1.310</span>
+		  <span class="enum-group-count">新增 7 项</span>
+		</div>
+		<table class="enum-table">
+		  <thead><tr><th style="width:60px">#</th><th>内容</th></tr></thead>
+		  <tbody>
+    <tr><td class="enum-val">1</td><td class="enum-name">新增遍历哈希表主键的接口</td></tr>
+    <tr><td class="enum-val">2</td><td class="enum-name">新增设置单位肖像模型的接口</td></tr>
+    <tr><td class="enum-val">3</td><td class="enum-name">新增设置物品模型和肖像模型的接口</td></tr>
+    <tr><td class="enum-val">4</td><td class="enum-name">增加物品自定义数据的封装(图标/名字/提示/扩展提示)</td></tr>
+    <tr><td class="enum-val">5</td><td class="enum-name">新增设置特效朝向的接口</td></tr>
+    <tr><td class="enum-val">6</td><td class="enum-name">新增设置物品颜色的接口</td></tr>
+    <tr><td class="enum-val">7</td><td class="enum-name">新增删除技能实例的接口</td></tr>
+  </tbody>
+</table>
+</div>
+</div>
+<div class="page" id="page-changelog-1.0.1.257" data-search="更新日志 changelog 1.0.1.257">
+
+<div class="enum-group" id="changelog-1.0.1.257">
+		<div class="enum-group-header">
+		  <span class="enum-group-name">1.0.1.257</span>
+		  <span class="enum-group-count">新增 1 项</span>
+		</div>
+		<table class="enum-table">
+		  <thead><tr><th style="width:60px">#</th><th>内容</th></tr></thead>
+		  <tbody>
+    <tr><td class="enum-val">1</td><td class="enum-name">新增获取当前选择的单位数量的接口</td></tr>
+  </tbody>
+</table>
+</div>
+</div>
+<div class="page" id="page-changelog-1.0.1.119" data-search="更新日志 changelog 1.0.1.119">
+
+<div class="enum-group" id="changelog-1.0.1.119">
+		<div class="enum-group-header">
+		  <span class="enum-group-name">1.0.1.119</span>
+		  <span class="enum-group-count">新增 2 项</span>
+		</div>
+		<table class="enum-table">
+		  <thead><tr><th style="width:60px">#</th><th>内容</th></tr></thead>
+		  <tbody>
+    <tr><td class="enum-val">1</td><td class="enum-name">为添加边框的接口增加对BACKDROP的支持</td></tr>
+    <tr><td class="enum-val">2</td><td class="enum-name">获取单位数据的接口中增加闪避几率的枚举</td></tr>
+  </tbody>
+</table>
+</div>
+</div>
+<div class="page" id="page-changelog-1.0.0.91" data-search="更新日志 changelog 1.0.0.91">
+
+<div class="enum-group" id="changelog-1.0.0.91">
+		<div class="enum-group-header">
+		  <span class="enum-group-name">1.0.0.91</span>
+		  <span class="enum-group-count">新增 1 项</span>
+		</div>
+		<table class="enum-table">
+		  <thead><tr><th style="width:60px">#</th><th>内容</th></tr></thead>
+		  <tbody>
+    <tr><td class="enum-val">1</td><td class="enum-name">新增任意尺寸的blp文件自动暗图标的功能</td></tr>
+  </tbody>
+</table>
+</div>
+</div>
+<div class="page" id="page-changelog-1.0.0.79" data-search="更新日志 changelog 1.0.0.79">
+
+<div class="enum-group" id="changelog-1.0.0.79">
+		<div class="enum-group-header">
+		  <span class="enum-group-name">1.0.0.79</span>
+		  <span class="enum-group-count">新增 3 项</span>
+		</div>
+		<table class="enum-table">
+		  <thead><tr><th style="width:60px">#</th><th>内容</th></tr></thead>
+		  <tbody>
+    <tr><td class="enum-val">1</td><td class="enum-name">新增获取地图作者名的接口</td></tr>
+    <tr><td class="enum-val">2</td><td class="enum-name">新增判定整数是否在整数池中的接口</td></tr>
+    <tr><td class="enum-val">3</td><td class="enum-name">新增json数组尾端插入的接口</td></tr>
+  </tbody>
+</table>
+</div>
+</div>
 
 <div class="page-footer" style="position:fixed;bottom:0;left:300px;right:0;padding:8px 40px;background:var(--bg-secondary);border-top:1px solid var(--border-color);text-align:center;color:var(--text-muted);font-size:0.78em;z-index:10;">
-		MemHack API Documentation &middot; Auto Generated at 2026-04-19 19:20:17 &middot; by Asphodelus
+		MemHack API Documentation &middot; Auto Generated at 2026-04-24 01:15:13 &middot; by Asphodelus
 </div>
 </main>
 
